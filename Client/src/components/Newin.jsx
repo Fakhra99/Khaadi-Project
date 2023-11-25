@@ -5,6 +5,7 @@ import './styles.css';
 
 const Newin = () => {
   return (
+    
     <div>
       <div>
         <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw595d78f9/images/plpbanners/PLP-BANNER-DESKTOPNew-in-.jpg" alt="Sale new" className='salebanner'/>

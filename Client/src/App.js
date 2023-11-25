@@ -1,24 +1,3 @@
-// import React from "react";
-// import { Route, Routes } from "react-router-dom";
-// import Home from "./components/Home";
-// import Signin from "./components/Signin";
-// import Navbar from "./components/Navbar";
-
-// function App() {
-//   return (
-//     <>
-//       <Navbar />
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/signin" element={<Signin />} />
-//       </Routes>
-     
-//     </>
-//   );
-// }
-
-// export default App;
-
 import React from "react";
  import { Route, Routes } from "react-router-dom";
 
@@ -32,7 +11,8 @@ import Newin from "./components/Newin";
 import Fabrics from "./components/Fabrics";
 import Readytowear from "./components/Readytowear";
 import Western from "./components/Western";
-// import Signup from "./components/Signup";
+import Track from "./components/Track";
+import Signup from "./components/Signup";
 
 function App() {
   return (
@@ -50,8 +30,9 @@ function App() {
     <Route path="/fabrics" element={<Fabrics/>}></Route>
     <Route path="/readyToWear" element={<Readytowear/>}></Route>
     <Route path="/western" element={<Western/>}></Route>
+    <Route path="/track" element={<Track/>}></Route>
+    <Route path="/signup" element={<Signup/>}></Route>
    </Routes>
-   {/* <Signup/> */}
     </>
   );
 }

@@ -244,9 +244,16 @@ body {
 }
 
 /* Signin */
-.signinDiv{
-  border: 1px solid grey;
-  /* display: flex; */
+.signinBtn{
+  width: 100px;
+}
+
+.signup{
+  background-color: white;
+}
+.signup:hover{
+  color: white;
+  background-color: #000;
 }
 
 /* saleNew */
@@ -359,4 +366,20 @@ body {
 
 .w_card8:hover{
   content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw1b5a7cf8/images/hi-res/eet23521_blue_2.jpg?sw=400&sh=600");
+}
+
+/* track order */
+.trackOrder{
+  width: 550px;
+  height: 50px;
+  margin-left: 350px;
+  background-color: #f0eeee;
+  border: none;
+}
+
+.trackBtn{
+  width: 100px;
+  margin-left: 20px;
+  background-color: #000;
+  color: #eee;
 }

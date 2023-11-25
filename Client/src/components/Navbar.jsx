@@ -31,7 +31,7 @@ const Navbar = () => {
 
 <div className='navIcons d-flex align-items-center'>
       <div>
-        <Link>
+        <Link to="/track">
         <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dwaaa352d2/images/track.svg" alt="track" style={{height:"20px", width:"25px", marginRight:"15px"}} />
         <p style={{ color: 'black', textDecoration: 'none' , fontSize:"12px"}}>Track</p>
         </Link>
