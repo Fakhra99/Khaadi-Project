@@ -32,26 +32,26 @@ const Navbar = () => {
 <div className='navIcons d-flex align-items-center'>
       <div>
         <Link>
-        <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dwaaa352d2/images/track.svg" alt="track" style={{height:"25px", width:"30px"}} />
-        <p style={{ color: 'black', textDecoration: 'none' }}>Track</p>
+        <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dwaaa352d2/images/track.svg" alt="track" style={{height:"25px", width:"25px", marginRight:"15px"}} />
+        <p style={{ color: 'black', textDecoration: 'none' , fontSize:"12px"}}>Track</p>
         </Link>
       </div>
       <div>
         <Link >
-        <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dw94606d2f/images/search.svg" alt="search" style={{height:"25px", width:"35px"}}/>
-        <p style={{ color: 'black', textDecoration: 'none' }}>Search</p>
+        <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dw94606d2f/images/search.svg" alt="search" style={{height:"20px", width:"25px", marginRight:"15px"}}/>
+        <p style={{ color: 'black', textDecoration: 'none' , fontSize:"12px"}}>Search</p>
         </Link>
       </div>
       <div>
         <Link to="/signin">
-        <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dwddbfe9d4/images/user.svg" alt="account" style={{height:"25px", width:"45px"}}/>
-        <p style={{ color: 'black', textDecoration: 'none' }}>Account</p>
+        <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dwddbfe9d4/images/user.svg" alt="account" style={{height:"20px", width:"45px", marginRight:"10px"}}/>
+        <p style={{ color: 'black', textDecoration: 'none' , fontSize:"12px"}}>Account</p>
         </Link>
       </div>
       <div>
         <Link>
-        <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dwc786c49d/images/shopping.svg" alt="bag" style={{height:"25px", width:"25px"}} />
-        <p style={{ color: 'black', textDecoration: 'none' }}>Bag</p>
+        <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dwc786c49d/images/shopping.svg" alt="bag" style={{height:"20px", width:"25px"}} />
+        <p style={{ color: 'black', textDecoration: 'none', fontSize:"12px"}}>Bag</p>
         </Link>
       </div>
     </div>
