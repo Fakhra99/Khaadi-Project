@@ -1,6 +1,5 @@
 import React from 'react';
-import Prenav from './Prenav';
-import Navbar from './Navbar';
+
 import Swiper from './Swiper';
 import Boxes from './Boxes'
 import Swiper1 from './Swiper1';
@@ -12,8 +11,8 @@ import Swiper4 from './Swiper4';
 const Home = () => {
   return (
     <div>
-    <Prenav/>
-    <Navbar/>
+    {/* <Prenav/>
+    <Navbar/> */}
     <Swiper/>
     <Boxes/>
     <Swiper1/>

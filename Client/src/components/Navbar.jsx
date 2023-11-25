@@ -19,9 +19,9 @@ const Navbar = () => {
   return (
     <div className={`navMain d-flex ${scrollPosition > 50 ? 'sticky' : ''}`}>
       
-        <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dw78f1bf68/images/logo.svg" alt="khaadi" />
+        <Link to="/"><img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dw78f1bf68/images/logo.svg" alt="khaadi" className='navMainimg'/> </Link>
          <div className='navLink'>
-         <Link to="" ><span style={{color:"#f8643c", fontWeight:"bold"}}>Sale <sup>New</sup></span></Link>
+         <Link to="/salenew" ><span style={{color:"#f8643c", fontWeight:"bold"}}>Sale <sup>New</sup></span></Link>
          <Link to=""> Winter collection</Link>
           <Link to=""> New in</Link>
          <Link to="" >Fabics</Link>
@@ -32,7 +32,7 @@ const Navbar = () => {
 <div className='navIcons d-flex align-items-center'>
       <div>
         <Link>
-        <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dwaaa352d2/images/track.svg" alt="track" style={{height:"25px", width:"25px", marginRight:"15px"}} />
+        <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dwaaa352d2/images/track.svg" alt="track" style={{height:"20px", width:"25px", marginRight:"15px"}} />
         <p style={{ color: 'black', textDecoration: 'none' , fontSize:"12px"}}>Track</p>
         </Link>
       </div>
