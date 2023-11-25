@@ -1,22 +1,23 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom';
-// import Signin from './Signin';
 
 const Navbar = () => {
-    // const navStyle=()=>{
-    //     const mainNav=document.getElementsByClassName('navMain');
-    //     mainNav.classList.add('navMain');
+  const [scrollPosition, setScrollPosition] = useState(0);
 
-    //     const NavLink=document.getElementsByClassName('navLink');
-    //     NavLink.classList.add('navLink');
+  const handleScroll = () => {
+    setScrollPosition(window.scrollY);
+  };
 
-    //      const NavIcons=document.getElementsByClassName('navIcons');
-    //     NavIcons.classList.add('navIcons');
-    // }
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className='navMain d-flex '>
+    <div className={`navMain d-flex ${scrollPosition > 50 ? 'sticky' : ''}`}>
       
         <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dw78f1bf68/images/logo.svg" alt="khaadi" />
          <div className='navLink'>
