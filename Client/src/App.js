@@ -13,6 +13,8 @@ import Readytowear from "./components/Readytowear";
 import Western from "./components/Western";
 import Track from "./components/Track";
 import Signup from "./components/Signup";
+import Bag from "./components/Bag";
+
 
 function App() {
   return (
@@ -32,6 +34,7 @@ function App() {
     <Route path="/western" element={<Western/>}></Route>
     <Route path="/track" element={<Track/>}></Route>
     <Route path="/signup" element={<Signup/>}></Route>
+    <Route path="/bag" element={<Bag/>}></Route>
    </Routes>
     </>
   );

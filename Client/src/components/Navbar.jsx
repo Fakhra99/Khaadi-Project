@@ -49,7 +49,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div>
-        <Link>
+        <Link to="/bag">
         <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dwc786c49d/images/shopping.svg" alt="bag" style={{height:"20px", width:"25px"}} />
         <p style={{ color: 'black', textDecoration: 'none', fontSize:"12px"}}>Bag</p>
         </Link>
