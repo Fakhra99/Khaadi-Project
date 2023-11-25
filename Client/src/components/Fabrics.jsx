@@ -3,18 +3,18 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
-const Salenew = () => {
+const Fabrics = () => {
   return (
     <div>
       <div>
-        <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw1c55b206/images/plpbanners/PLP-BANNER-DESKTOP-SALE.jpg" alt="Sale new" className='salebanner'/>
+        <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw84fdb156/images/plpbanners/Fabrics-PrintStory-PLP-Desk-1920x225-1.jpg" alt="Sale new" className='salebanner'/>
       </div>
 
       <div>
         <nav style={{ "--bs-breadcrumb-divider": "'/'" }} aria-label="breadcrumb">
           <ol className="breadcrumb bcrum">
             <li className="breadcrumb-item "><Link to="/" className='bcrumLi'>Home</Link></li>
-            <li className="breadcrumb-item active" aria-current="page" style={{fontWeight:"bold"}}>Sale</li>
+            <li className="breadcrumb-item active" aria-current="page" style={{fontWeight:"bold"}}>Fabrics</li>
           </ol>
         </nav>
       </div>
@@ -119,4 +119,4 @@ const Salenew = () => {
   );
 }
 
-export default Salenew;
+export default Fabrics;

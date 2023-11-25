@@ -22,11 +22,11 @@ const Navbar = () => {
         <Link to="/"><img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dw78f1bf68/images/logo.svg" alt="khaadi" className='navMainimg'/> </Link>
          <div className='navLink'>
          <Link to="/salenew" ><span style={{color:"#f8643c", fontWeight:"bold"}}>Sale <sup>New</sup></span></Link>
-         <Link to=""> Winter collection</Link>
-          <Link to=""> New in</Link>
-         <Link to="" >Fabics</Link>
-         <Link to=""> Ready to wear </Link>
-         <Link to=""> Western </Link> 
+         <Link to="/winterCollection"> Winter collection</Link>
+          <Link to="/newIn"> New in</Link>
+         <Link to="/fabrics" >Fabics</Link>
+         <Link to="/readyToWear"> Ready to wear </Link>
+         <Link to="/western"> Western </Link> 
          </div>
 
 <div className='navIcons d-flex align-items-center'>

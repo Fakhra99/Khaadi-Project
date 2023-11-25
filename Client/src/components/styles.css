@@ -257,7 +257,7 @@ body {
 
 .bcrum{
   margin-left: 20px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .bcrumLi{
@@ -266,7 +266,97 @@ body {
 }
 
 .bcrumDropdown{
-  padding: 5px;
-  width:140px;
-  margin-left:6px;
+  width: 170px;
+  margin-left: 10px;
+  background-color: white;
+  border: 1px solid grey;
+  height: 30px;
+}
+
+.Addbtn{
+  width: 318px;
+  margin-left: 1px;
+  /* margin-bottom: 0px; */
+  position:absolute;
+  left: 0px;
+  top: 452px;
+  border: none;
+}
+
+.Addbtn:hover{
+  background-color: #000;
+  color: white;
+}
+
+/* cards hover*/
+.card1:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw59278b95/images/hi-res/lla230810_red_2.jpg?sw=400&sh=600");
+}
+
+.card2:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw084f8186/images/hi-res/ala230820_black_2.jpg?sw=400&sh=600");
+}
+
+.card3:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw183455b9/images/hi-res/lla230810_teal_2.jpg?sw=400&sh=600");
+}
+
+.card4:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw6192b863/images/hi-res/bla230806_pink_2.jpg?sw=400&sh=600");
+}
+
+.card5:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwe46a3efb/images/hi-res/ala230806_teal_2.jpg?sw=400&sh=600");
+}
+
+.card6:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw77f3a425/images/hi-res/bla230806_black_2.jpg?sw=400&sh=600");
+}
+
+.card7:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw431151ed/images/hi-res/ala230817_blue_2.jpg?sw=400&sh=600");
+}
+
+.card8:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw2436b213/images/hi-res/ala230821_teal_2.jpg?sw=400&sh=600");
+}
+
+.filter{
+  width: 170px;
+  margin-left: 10px;
+  background-color: white;
+  border: 1px solid grey;
+  height: 30px;
+}
+
+/* wintercollection hover */
+.w_card1:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw7535ebbe/images/hi-res/eet235103_black_2.jpg?sw=400&sh=600");
+}
+
+.w_card2:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw158467ff/images/hi-res/alk231105_navy_2.jpg?sw=400&sh=600");
+}
+.w_card3:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwfd5e310a/images/hi-res/alk231109_d-green_2.jpg?sw=400&sh=600");
+}
+
+.w_card4:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw5f1a5779/images/hi-res/alk231105_green_2.jpg?sw=400&sh=600");
+}
+
+.w_card5:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw54ca5a46/images/hi-res/alk231109_navy_5.jpg?sw=400&sh=600");
+}
+
+.w_card6:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw0f2bad25/images/hi-res/blk231103_red_2.jpg?sw=400&sh=600");
+}
+
+.w_card7:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw880a6832/images/hi-res/blk231103_purple_2.jpg?sw=400&sh=600");
+}
+
+.w_card8:hover{
+  content: url("https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw1b5a7cf8/images/hi-res/eet23521_blue_2.jpg?sw=400&sh=600");
 }

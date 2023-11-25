@@ -3,18 +3,18 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
-const Salenew = () => {
+const Wintercollection = () => {
   return (
     <div>
       <div>
-        <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw1c55b206/images/plpbanners/PLP-BANNER-DESKTOP-SALE.jpg" alt="Sale new" className='salebanner'/>
+        <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dwb74333d8/images/plpbanners/Kantha-WC-PLP-Desk-1920x225-2.jpg" alt="Sale new" className='salebanner'/>
       </div>
 
       <div>
         <nav style={{ "--bs-breadcrumb-divider": "'/'" }} aria-label="breadcrumb">
           <ol className="breadcrumb bcrum">
             <li className="breadcrumb-item "><Link to="/" className='bcrumLi'>Home</Link></li>
-            <li className="breadcrumb-item active" aria-current="page" style={{fontWeight:"bold"}}>Sale</li>
+            <li className="breadcrumb-item active" aria-current="page" style={{fontWeight:"bold"}}>Winter Collection</li>
           </ol>
         </nav>
       </div>
@@ -35,7 +35,7 @@ const Salenew = () => {
 
       <div className='d-flex ml-5 align-item-center justify-content-evenly'>
         <div className="card" style={{width: "20rem"}}>
-        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw7a83b8b8/images/hi-res/lla230810_red_1.jpg?sw=800&sh=1200" className="card-img-top card1" alt="cardimg"/>
+        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwf070223c/images/hi-res/eet235103_black_1.jpg?sw=800&sh=1200" className="card-img-top w_card1" alt="cardimg"/>
         <div className="card-body">
         <button to="#" className="Addbtn" >Add To Bag</button>
         <p><Link style={{textDecoration:"none", color:"black"}}>Fabrics 2 Piece</Link></p>
@@ -45,7 +45,7 @@ const Salenew = () => {
         </div>
         </div>
         <div class="card" style={{width: "20rem", position:"relative"}}>
-        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwe0f16618/images/hi-res/ala230820_black_1.jpg?sw=800&sh=1200" className="card-img-top card2" alt="cardimg"/>
+        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw19bd1593/images/hi-res/alk231105_navy_1.jpg?sw=800&sh=1200" className="card-img-top w_card2" alt="cardimg"/>
         <div class="card-body">
         <button to="#" className="Addbtn" >Add To Bag</button>
         <p><Link style={{textDecoration:"none", color:"black"}}>Fabrics 2 Piece</Link></p>
@@ -56,7 +56,7 @@ const Salenew = () => {
         
         </div>
         <div class="card" style={{width: "20rem"}}>
-        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwda876d8c/images/hi-res/lla230810_teal_1.jpg?sw=800&sh=1200" className="card-img-top card3" alt="..."/>
+        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw688aca25/images/hi-res/alk231109_d-green_1.jpg?sw=800&sh=1200" className="card-img-top w_card3" alt="..."/>
         <div class="card-body">
         <button to="#" className="Addbtn" >Add To Bag</button>
         <p><Link style={{textDecoration:"none", color:"black"}}>Fabrics 2 Piece</Link></p>
@@ -65,7 +65,7 @@ const Salenew = () => {
         </div>
         </div>
         <div class="card" style={{width: "20rem"}}>
-        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw43db13af/images/hi-res/bla230806_pink_1.jpg?sw=800&sh=1200" className="card-img-top card4" alt="..."/>
+        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw3cb3ff6b/images/hi-res/alk231105_green_1.jpg?sw=800&sh=1200" className="card-img-top w_card4" alt="..."/>
         <div class="card-body">
         <button to="#" className="Addbtn" >Add To Bag</button>
         <p><Link style={{textDecoration:"none", color:"black"}}>Fabrics 2 Piece</Link></p>
@@ -77,7 +77,7 @@ const Salenew = () => {
 
       <div className='d-flex ml-5 align-item-center justify-content-evenly'>
         <div class="card" style={{width: "20rem"}}>
-        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw541fcf91/images/hi-res/ala230806_teal_1.jpg?sw=800&sh=1200" className="card-img-top card5" alt="..."/>
+        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwdf79c967/images/hi-res/alk231109_navy_4.jpg?sw=800&sh=1200" className="card-img-top w_card5" alt="..."/>
         <div class="card-body">
        <button to="#" className="Addbtn" >Add To Bag</button>
         <p><Link style={{textDecoration:"none", color:"black"}}>Fabrics 2 Piece</Link></p>
@@ -86,7 +86,7 @@ const Salenew = () => {
         </div>
         </div>
         <div class="card" style={{width: "20rem"}}>
-        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwf1f6602f/images/hi-res/bla230806_black_1.jpg?sw=800&sh=1200" className="card-img-top card6" alt="..."/>
+        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw5a87af75/images/hi-res/blk231103_red_1.jpg?sw=800&sh=1200" className="card-img-top w_card6" alt="..."/>
         <div class="card-body">
         <button to="#" className="Addbtn" >Add To Bag</button>
         <p><Link style={{textDecoration:"none", color:"black"}}>Fabrics 2 Piece</Link></p>
@@ -95,7 +95,7 @@ const Salenew = () => {
         </div>
         </div>
         <div class="card" style={{width: "20rem"}}>
-        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw54855e22/images/hi-res/ala230817_blue_1.jpg?sw=800&sh=1200" className="card-img-top card7" alt="..."/>
+        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw240a6bd0/images/hi-res/blk231103_purple_1.jpg?sw=800&sh=1200" className="card-img-top w_card7" alt="..."/>
         <div class="card-body">
         <button to="#" className="Addbtn" >Add To Bag</button>
         <p><Link style={{textDecoration:"none", color:"black"}}>Fabrics 2 Piece</Link></p>
@@ -104,7 +104,7 @@ const Salenew = () => {
         </div>
         </div>
         <div class="card" style={{width: "20rem"}}>
-        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw75f51f17/images/hi-res/ala230821_teal_1.jpg?sw=800&sh=1200" className="card-img-top card8" alt="..."/>
+        <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw498a3bed/images/hi-res/eet23521_blue_1.jpg?sw=800&sh=1200" className="card-img-top w_card8" alt="..."/>
         <div class="card-body">
        <button to="#" className="Addbtn" >Add To Bag</button>
         <p><Link style={{textDecoration:"none", color:"black"}}>Fabrics 2 Piece</Link></p>
@@ -119,4 +119,4 @@ const Salenew = () => {
   );
 }
 
-export default Salenew;
+export default Wintercollection;
