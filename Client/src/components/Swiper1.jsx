@@ -33,11 +33,13 @@ const Swiper1 = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide className='slide1'></SwiperSlide>
-        <SwiperSlide className='slide2'></SwiperSlide>
-        <SwiperSlide className='slide3'></SwiperSlide>
-        <SwiperSlide className='slide4'></SwiperSlide>
-         <SwiperSlide className='slide5'></SwiperSlide>
+        <SwiperSlide className='slide1'>
+          <button to="#" className="addTobag" >Add To Bag</button>
+        </SwiperSlide>
+        <SwiperSlide className='slide2 s1'><button to="#" className="addTobag" >Add To Bag</button></SwiperSlide>
+        <SwiperSlide className='slide3'><button to="#" className="addTobag" >Add To Bag</button></SwiperSlide>
+        <SwiperSlide className='slide4'><button to="#" className="addTobag" >Add To Bag</button></SwiperSlide>
+         <SwiperSlide className='slide5'><button to="#" className="addTobag" >Add To Bag</button></SwiperSlide>
       </Swiper>
             </div>
         </div>

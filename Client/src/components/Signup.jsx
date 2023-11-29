@@ -1,27 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles.css';
 import { Link } from 'react-router-dom';
 
 const Signup = () => {
+  const [signupData, setsignupData]=useState({
+    Fname:"",
+    Lname:"",
+    email:"",
+    password:""
+  });
+
+  const onChange=(e)=>{
+    setsignupData({...signupData, [e.target.name]: [e.target.value]});
+  }
+
+  const onSubmit = (e) => {
+    e.preventDefault(); //prevents refreshing page, agr page refresh hoga tou state mein jo bhi data hoga khatam ho jaye ga
+    console.log(signupData);
+    // empty form field after submitting
+    setsignupData({
+        Fname:"",
+        Lname:"",
+        email:"",
+        password:""
+    })
+  };
   return (
       <div className='container signinDiv d-flex flex-column align-items-center'>
       <div className="d-flex justify-content-between w-50 mb-3">
-        <Link to="/signin" className='btn btn-dark text-light w-50 signup'>Sign Up</Link>
-        <button className='btn w-50 signup'>Create Account</button>
+        <Link to="/signin" className='btn  text-dark w-50 signup'>Sign in</Link>
+        <button className='btn btn-dark w-50 signup'>Create Account</button>
       </div>
-      <form className="w-50">
+      <form className="w-50" onSubmit={onSubmit}>
         <div className="mb-3">
           <label htmlFor="firstName" className="form-label">First Name <sup style={{ color: "red" }}>*</sup></label>
-          <input type="text" className="form-control" id="firstName" placeholder="First Name" />
+          <input type="text" className="form-control" name='Fname' value={signupData.Fname} onChange={onChange} id="firstName" placeholder="First Name" />
         </div>
         <div className="mb-3">
           <label htmlFor="lastName" className="form-label">Last Name <sup style={{ color: "red" }}>*</sup></label>
-          <input type="text" className="form-control" id="lastName" placeholder="Last Name" />
+          <input type="text" className="form-control" name='Lname' value={signupData.Lname} onChange={onChange} id="lastName" placeholder="Last Name" />
         </div>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">Email <sup style={{ color: "red" }}>*</sup></label>
-          <input type="email" className="form-control" id="email" placeholder="example@gmail.com" />
+          <input type="email" className="form-control" name='email' value={signupData.email} onChange={onChange} id="email" placeholder="example@gmail.com" />
         </div>
         <div className="mb-3">
           <label htmlFor="confirmEmail" className="form-label">Confirm Email <sup style={{ color: "red" }}>*</sup></label>
@@ -29,16 +51,16 @@ const Signup = () => {
         </div>
         <div className="mb-3">
           <label htmlFor="password" className="form-label">Password <sup style={{ color: "red" }}>*</sup></label>
-          <input type="password" className="form-control" id="password" />
+          <input type="password" className="form-control" name='password' value={signupData.password} onChange={onChange} id="password" />
         </div>
         <div className="mb-3">
           <label htmlFor="confirmPassword" className="form-label">Confirm Password <sup style={{ color: "red" }}>*</sup></label>
           <input type="password" className="form-control" id="confirmPassword" />
         </div>
-        <div className="mb-3 form-check">
+        {/* <div className="mb-3 form-check">
           <input type="checkbox" className="form-check-input" id="newsletterSignup" />
           <label className="form-check-label" htmlFor="newsletterSignup">Signup for Newsletter</label>
-        </div>
+        </div> */}
         <div className='mb-3'>
           <button className='w-100 btn btn-dark'>CREATE ACCOUNT</button>
         </div>

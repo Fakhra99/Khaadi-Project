@@ -84,6 +84,8 @@ body {
   color: #000;
 }
 
+
+
 /* swiper */
 #app {
   height: 100%;
@@ -251,10 +253,10 @@ body {
 .signup{
   background-color: white;
 }
-.signup:hover{
+/* .signup:hover{
   color: white;
   background-color: #000;
-}
+} */
 
 /* saleNew */
 .salebanner{
@@ -291,6 +293,23 @@ body {
 }
 
 .Addbtn:hover{
+  background-color: #000;
+  color: white;
+}
+
+.s1{
+  position: relative;
+}
+
+.addTobag{
+  width: 270px;
+  margin-left: 1px;
+  position:absolute;
+  top: 375px;
+  border: none;
+}
+
+.addTobag:hover{
   background-color: #000;
   color: white;
 }

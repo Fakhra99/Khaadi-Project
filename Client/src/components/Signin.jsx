@@ -1,24 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles.css';
 import { Link } from 'react-router-dom';
 
 const Signin = () => {
+  const [signinData, setsigninData]=useState({
+    email:"",
+    password:""
+  })
+
+  const onChange=(e)=>{
+    setsigninData({...signinData, [e.target.name]:[e.target.value]});
+  }
+
+  const onSubmit=(e)=>{
+    e.preventDefault();
+    console.log(signinData);
+    setsigninData({
+        email:"",
+        password:""
+    })
+  };
   return (
     <div className='container signinDiv mt-5 d-flex justify-content-center align-items-center'>
       <div className="w-50">
         <div className="d-flex">
-          <button className='btn btn-dark w-50'>Sign In</button>
+          <button className='btn btn-dark w-50'><Link to="/signin" style={{textDecoration:"none", color:"white"}}>Sign In </Link></button>
           <button className=' w-50 signup'><Link to="/signup" className='text-dark signup'>Create Account </Link></button>
         </div>
-        <form>
+        <form onSubmit={onSubmit}>
           <div className="mb-3">
             <label htmlFor="email" className="form-label">Email <sup style={{ color: "red" }}>*</sup></label>
-            <input type="email" className="form-control" id="email" placeholder="example@gmail.com" />
+            <input type="email" className="form-control" name='email' value={signinData.email} id="email" onChange={onChange} placeholder="example@gmail.com" />
           </div>
           <div className="mb-3">
             <label htmlFor="password" className="form-label">Password <sup style={{ color: "red" }}>*</sup></label>
-            <input type="password" className="form-control" id="password" />
+            <input type="password" className="form-control" name='password' value={signinData.password} onChange={onChange} id="password" />
           </div>
           <div className="mb-3 form-check">
             <input type="checkbox" className="form-check-input" id="rememberMe" />
