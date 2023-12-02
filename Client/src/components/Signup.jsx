@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles.css';
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 const Signup = () => {
   const [signupData, setsignupData]=useState({
@@ -12,12 +13,13 @@ const Signup = () => {
   });
 
   const onChange=(e)=>{
-    setsignupData({...signupData, [e.target.name]: [e.target.value]});
+    setsignupData({...signupData, [e.target.name]:e.target.value})
   }
 
-  const onSubmit = (e) => {
+  const onSubmit = async(e) => {
     e.preventDefault(); //prevents refreshing page, agr page refresh hoga tou state mein jo bhi data hoga khatam ho jaye ga
-    console.log(signupData);
+     const sdata=await axios.post("http://localhost:4041/signup",signupData);
+    console.log(sdata);
     // empty form field after submitting
     setsignupData({
         Fname:"",

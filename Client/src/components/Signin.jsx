@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles.css';
 import { Link } from 'react-router-dom';
+import axios from "axios"
 
 const Signin = () => {
   const [signinData, setsigninData]=useState({
@@ -10,12 +11,14 @@ const Signin = () => {
   })
 
   const onChange=(e)=>{
-    setsigninData({...signinData, [e.target.name]:[e.target.value]});
+    setsigninData({...signinData, [e.target.name]:e.target.value});
   }
 
-  const onSubmit=(e)=>{
-    e.preventDefault();
-    console.log(signinData);
+   const onSubmit = async(e) => {
+    e.preventDefault(); //prevents refreshing page, agr page refresh hoga tou state mein jo bhi data hoga khatam ho jaye ga
+     const ldata=await axios.post("http://localhost:4041/signin",signinData);
+    console.log(ldata);
+
     setsigninData({
         email:"",
         password:""
