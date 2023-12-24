@@ -12,40 +12,96 @@ const Signup = () => {
     password:""
   });
 
-  const onChange=(e)=>{
-    setsignupData({...signupData, [e.target.name]:e.target.value})
-  }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setsignupData((prevData) => ({
+      ...prevData,
 
-  const onSubmit = async(e) => {
-    e.preventDefault(); //prevents refreshing page, agr page refresh hoga tou state mein jo bhi data hoga khatam ho jaye ga
-     const sdata=await axios.post("http://localhost:4041/signup",signupData);
-    console.log(sdata);
-    // empty form field after submitting
-    setsignupData({
-        Fname:"",
-        Lname:"",
-        email:"",
-        password:""
-    })
+      [name]: value,
+
+    }));
   };
+
+  // const onSubmitHandler = async(e) => {
+  //   e.preventDefault(); //prevents refreshing page, agr page refresh hoga tou state mein jo bhi data hoga khatam ho jaye ga
+  //   const data=await axios.post("http://localhost:4041/api/signup",signupData);
+  //   console.log('data', data)
+    
+  //   // empty form field after submitting
+  //   setsignupData({
+  //       Fname:"",
+  //       Lname:"",
+  //       email:"",
+  //       password:""
+  //   })
+  // };
+  
+//   const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   try {
+//     const response = await axios.post('http://localhost:4041/api/signup', signupData);
+//     if (response.status === 200) {
+//       // Handle successful signup (e.g., redirect, show success message)
+//       console.log('Signup successful!');
+//       // empty form field after submitting
+//       setsignupData({
+//         Fname: "",
+//         Lname: "",
+//         email: "",
+//         password: ""
+//       });
+//     } else {
+//       // Handle signup error (e.g., display error message)
+//       console.error('Signup failed');
+//     }
+//   } catch (error) {
+//     console.error('Error during signup:', error);
+//   }
+// };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await axios.post('http://localhost:4041/api/signup', signupData);
+
+    // Check for a successful HTTP status code (e.g., 2xx range)
+    if (response.status >= 200 && response.status < 300) {
+      // Handle successful signup (e.g., redirect, show success message)
+      console.log('Signup successful!');
+      // empty form field after submitting
+      setsignupData({
+        Fname: "",
+        Lname: "",
+        email: "",
+        password: ""
+      });
+    } else {
+      // Handle signup error (e.g., display error message)
+      console.error('Signup failed. Server response:', response.data);
+    }
+  } catch (error) {
+    console.error('Error during signup:', error);
+  }
+};
+
+
   return (
       <div className='container signinDiv d-flex flex-column align-items-center'>
       <div className="d-flex justify-content-between w-50 mb-3">
         <Link to="/signin" className='btn  text-dark w-50 signup'>Sign in</Link>
         <button className='btn btn-dark w-50 signup'>Create Account</button>
       </div>
-      <form className="w-50" onSubmit={onSubmit}>
+      <form className="w-50" onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="firstName" className="form-label">First Name <sup style={{ color: "red" }}>*</sup></label>
-          <input type="text" className="form-control" name='Fname' value={signupData.Fname} onChange={onChange} id="firstName" placeholder="First Name" />
+          <input type="text" className="form-control" name='Fname' value={signupData.Fname} onChange={handleChange} id="firstName" placeholder="First Name" />
         </div>
         <div className="mb-3">
           <label htmlFor="lastName" className="form-label">Last Name <sup style={{ color: "red" }}>*</sup></label>
-          <input type="text" className="form-control" name='Lname' value={signupData.Lname} onChange={onChange} id="lastName" placeholder="Last Name" />
+          <input type="text" className="form-control" name='Lname' value={signupData.Lname} onChange={handleChange} id="lastName" placeholder="Last Name" />
         </div>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">Email <sup style={{ color: "red" }}>*</sup></label>
-          <input type="email" className="form-control" name='email' value={signupData.email} onChange={onChange} id="email" placeholder="example@gmail.com" />
+          <input type="email" className="form-control" name='email' value={signupData.email} onChange={handleChange} id="email" placeholder="example@gmail.com" />
         </div>
         <div className="mb-3">
           <label htmlFor="confirmEmail" className="form-label">Confirm Email <sup style={{ color: "red" }}>*</sup></label>
@@ -53,7 +109,7 @@ const Signup = () => {
         </div>
         <div className="mb-3">
           <label htmlFor="password" className="form-label">Password <sup style={{ color: "red" }}>*</sup></label>
-          <input type="password" className="form-control" name='password' value={signupData.password} onChange={onChange} id="password" />
+          <input type="password" className="form-control" name='password' value={signupData.password} onChange={handleChange} id="password" />
         </div>
         <div className="mb-3">
           <label htmlFor="confirmPassword" className="form-label">Confirm Password <sup style={{ color: "red" }}>*</sup></label>
