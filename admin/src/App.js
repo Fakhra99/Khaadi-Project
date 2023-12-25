@@ -5,8 +5,9 @@ import {Routes, Route} from 'react-router-dom'
 function App() {
   return (
  <>
+ {/* <SignupListing/> */}
  <Routes>
- <Route path="signup" element= {<SignupListing/>}> </Route>
+ <Route path="/" element= {<SignupListing/>}> </Route>
  <Route path="signup/:id" element= {<SignupDetail/>}> </Route>
  {/* <LoginsListing/> */}
  </Routes>

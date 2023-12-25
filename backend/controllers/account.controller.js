@@ -13,6 +13,8 @@ import jsonwebtoken from 'jsonwebtoken'
 // console.log(err)
 //     }
 // }
+
+// register
 export const register = async (req, res) => {
 
     try {
@@ -54,10 +56,10 @@ export const login = async (req, res) => {
     }
 }
 
-
+// fetch all accounts
 export const getAllContacts=async(req,res)=>{
     try{
-        const signups=await Signup.find()
+        const signups=await User.find()
         res.json({status:200,message:"accounts Fetched Successfully",success:true,signups})
 
     }
@@ -66,10 +68,11 @@ console.log(err)
     }
 }
 
+// fetch account
 export const getSingleAccount=async(req,res)=>{
     try{
         const {id}=req.params;
-        const signup = await Signup.findOne({ _id: id });
+        const signup = await User.findOne({ _id: id });
 if(!signup){
     return res.json({status:404,message:"Couldn't find account",success:false})
 }
@@ -81,32 +84,33 @@ if(!signup){
     }
 }
 
-// exports.destroy=async(req,res)=>{
-//     try{
-// const {id}=req.params;
-// const contact=await Contact.findOneAndDelete({_id:id})
-// if(!contact){
-//     return res.json({status:404,message:"Couldn't find contact",success:false})
-// }
-// res.json({status:200,message:"Contact deleted",success:true})
-//     }
-//     catch(err){
-//         console.log(err)
-//     }
-// }
-// exports.update=async(req,res)=>{
-//     try{
-//         const {id}=req.params;
-//         const payload=req.body;        
-//         const contact=await Contact.findOneAndUpdate({_id:id},payload,{new:true})
-//         if(!contact){
-//             return res.json({status:404,message:"Contact not found",success:false})
-//         }
-//         res.json({status:200,message:"Contact updated",success:true,contact})
-//     }
-//     catch(err){
-//         console.log(err)
-//     }
-   
+// delete
+export const delAccount=async(req,res)=>{
+    try{
+const {id}=req.params;
+const contact=await User.findOneAndDelete({_id:id})
+if(!contact){
+    return res.json({status:404,message:"Couldn't find contact",success:false})
+}
+res.json({status:200,message:"Contact deleted",success:true})
+    }
+    catch(err){
+        console.log(err)
+    }
+}
 
-//  }
+// update
+export const update=async(req,res)=>{
+    try{
+        const {id}=req.params;
+        const payload=req.body;        
+        const contact=await User.findOneAndUpdate({_id:id},payload,{new:true})
+        if(!contact){
+            return res.json({status:404,message:"Contact not found",success:false})
+        }
+        res.json({status:200,message:"Contact updated",success:true,contact})
+    }
+    catch(err){
+        console.log(err)
+    }
+ }
