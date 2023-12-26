@@ -14,6 +14,8 @@ import Western from "./components/Western";
 import Track from "./components/Track";
 import Signup from "./components/Signup";
 import Bag from "./components/Bag";
+import Forgotpassword from "./components/Forgotpassword";
+import ChangePassword from "./components/Changepassword";
 
 
 function App() {
@@ -35,6 +37,9 @@ function App() {
     <Route path="/track" element={<Track/>}></Route>
     <Route path="/signup" element={<Signup/>}></Route>
     <Route path="/bag" element={<Bag/>}></Route>
+    <Route path="/forgot-password" element={<Forgotpassword/>}></Route>
+    <Route path="/changepassword" element={<ChangePassword/>}></Route>
+
    </Routes>
     </>
   );

@@ -72,7 +72,7 @@ const Signin = () => {
           <div className="mb-3 form-check">
             <input type="checkbox" className="form-check-input" id="rememberMe" />
             <label className="form-check-label" htmlFor="rememberMe" style={{ marginRight: "300px" }}>Remember Me</label>
-            <a href="/forgot-password" className="ml-auto" style={{ textDecoration: "none", color: "black" }}>Forgot Password?</a>
+            <Link to="/forgot-password" className="ml-auto" style={{ textDecoration: "none", color: "black" }}>Forgot Password?</Link>
           </div>
           <div className='mb-3'>
             <button className='w-100 btn btn-dark' type='submit'>SIGN IN</button>

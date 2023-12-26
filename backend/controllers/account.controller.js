@@ -1,7 +1,10 @@
 // in controller we write logic how to recieve data how to get data, delete and update data
 import User from "../models/account.model.js";
 import bcrypt from 'bcrypt';
-import jsonwebtoken from 'jsonwebtoken'
+import jsonwebtoken from 'jsonwebtoken';
+import Otp from '../models/otp.model.js';
+import nodemailer from 'nodemailer';
+import crypto from 'crypto';
 
 // export const signupUser=async(req,res)=>{
 //     try{
@@ -114,3 +117,61 @@ export const update=async(req,res)=>{
         console.log(err)
     }
  }
+
+ // forget password
+export const forgetPassword = async (req, res) => {
+
+  try {
+    const { email } = req.body
+    const user = await User.findOne({ email })
+
+    if (user) {
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+
+          user:"fakhrahnajeeb61@gmail.com",
+            pass: "txbq fajz ubvh qcjx"
+        }
+
+      })
+      const otp = crypto.randomBytes(3).toString('hex')
+      const mailOptions = {
+        from: "fakhrahnajeeb61@gmail.com",
+        to: email,
+        subject: "Password Reset OTP",
+        text: `Your Otp is ${otp}`
+      }
+
+      transporter.sendMail(mailOptions)
+      const otpSave = new Otp({
+        email,
+        otp
+      })
+      await otpSave.save()
+      res.status(200).json({ message: "OTP Send Successfully" })
+    }
+
+  } catch (error) {
+    res.status(500).json({ message: error.message })
+  }
+}
+
+// verifyotp
+
+export const verifyotp = async (req, res) => {
+    try{
+        const{email,otp,newPassword} = req.body
+        const otpverify = await Otp.findOne ({otp})
+
+        if(!otpverify){
+            return res.status(400).json({message:"invalid otp"})
+        }
+        const hashPassword =await bcrypt.hash (newPassword, 10);
+        await User.updateOne ({email}, {$set: {password:hashPassword} });
+        await Otp.deleteOne({email})
+        res.status(200).json({message:"password changed successfully"})
+    }catch(error){
+        res.status(501).json({message:error.message})
+    }
+}
