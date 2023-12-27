@@ -1,5 +1,5 @@
 import React from "react";
- import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Home from "./components/Home";
 import Signin from "./components/Signin";
@@ -16,7 +16,7 @@ import Signup from "./components/Signup";
 import Bag from "./components/Bag";
 import Forgotpassword from "./components/Forgotpassword";
 import ChangePassword from "./components/Changepassword";
-
+import WintercollectionData from './components/WinterCollectionData'
 
 function App() {
   return (
@@ -39,6 +39,7 @@ function App() {
     <Route path="/bag" element={<Bag/>}></Route>
     <Route path="/forgot-password" element={<Forgotpassword/>}></Route>
     <Route path="/changepassword" element={<ChangePassword/>}></Route>
+    <Route path="/wintercollectiondata" element={<WintercollectionData/>}></Route>
 
    </Routes>
     </>
