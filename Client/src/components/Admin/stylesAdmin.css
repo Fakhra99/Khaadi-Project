@@ -1,0 +1,26 @@
+/* admin css */
+.collectionBtns{
+  background-color: #f8643c;
+  color: #eee;
+}
+
+.collectionBtns:hover{
+  background-color: #eee;
+  color: black;
+}
+
+.cardImg{
+  height: 50%;
+}
+
+.adminP1{
+  background-color: black;
+  height: 25px;
+  color: white;
+  font-weight: bold;
+  padding-top: 12px;
+  line-height: 5px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}

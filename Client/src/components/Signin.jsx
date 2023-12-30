@@ -1,59 +1,65 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles.css';
-import { Link } from 'react-router-dom';
-import axios from "axios"
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import PreNav from './Prenav';
+import Navbar from './Navbar'
 
 const Signin = () => {
-  const [signinData, setsigninData]=useState({
-    email:"",
-    password:""
-  })
+  const navigate = useNavigate();  // Initialize the navigate hook
+  const [signinData, setsigninData] = useState({
+    email: "",
+    password: ""
+  });
 
-  // const onChange=(e)=>{
-  //   setsigninData({...signinData, [e.target.name]:e.target.value});
-  // }
   const handleChange = (e) => {
     const { name, value } = e.target;
     setsigninData((prevData) => ({
       ...prevData,
-
       [name]: value,
-
     }));
   };
 
-  //  const onSubmit = async(e) => {
-  //   e.preventDefault(); //prevents refreshing page, agr page refresh hoga tou state mein jo bhi data hoga khatam ho jaye ga
-  //   await axios.post("http://localhost:4041/api/signin",signinData);
-    
-
-  //   setsigninData({
-  //       email:"",
-  //       password:""
-  //   })
-  // };
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  try {
-    const response = await axios.post('http://localhost:4041/api/signin', signinData);
-    if (response.status === 200) {
-      // Handle successful signup (e.g., redirect, show success message)
-      console.log('Signin successful!');
-      // empty form field after submitting
-      setsigninData({
-        email: "",
-        password: ""
-      });
-    } else {
-      // Handle signin error (e.g., display error message)
-      console.error('Signin failed');
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:4041/api/signin', signinData);
+      console.log('Server Response:', response);
+
+      if (response.status === 200) {
+        console.log('Signin successful!');
+        setsigninData({
+          email: "",
+          password: ""
+        });
+
+        // Check the user's role and navigate accordingly
+        const userRole = response.data.role;  
+        console.log('User Role:', userRole);
+        // console.log(response);
+
+
+        if (userRole === 'customer') {
+          // Navigate to the home page
+          navigate('/');
+        } else if (userRole === 'admin') {
+          // Navigate to the admin dashboard
+          navigate('/adminn');
+        } else {
+         
+        }
+      } else {
+        console.error('Signin failed');
+      }
+    } catch (error) {
+      console.error('Error during signin:', error);
     }
-  } catch (error) {
-    console.error('Error during signin:', error);
-  }
-};
+  };
   return (
+   <div>
+    <PreNav/>
+    <Navbar/>
     <div className='container signinDiv mt-5 d-flex justify-content-center align-items-center'>
       <div className="w-50">
         <div className="d-flex">
@@ -86,6 +92,7 @@ const Signin = () => {
           </div>
         </form>
       </div>
+    </div>
     </div>
   )
 }

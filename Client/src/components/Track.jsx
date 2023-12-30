@@ -1,9 +1,14 @@
 import React from 'react';
 import './styles.css'
+import Navbar from "./Navbar";
+import Prenav from "./Prenav";
+import { Link } from 'react-router-dom';
 
 const Track = () => {
   return (
     <div>
+      <Link to="/prenav"><Prenav/></Link>
+    <Link to="/prenavbarnav"><Navbar/></Link>
         <img src="https://cx.khaadi.com/static/media/Khaadi-Logo.0bfb805a1b3ce9b61cd6.png" alt="Khaadi logo" className="navMainimg"/>
         <hr />
         <div className='container d-flex justify-content-center align-items-center'>

@@ -14,8 +14,14 @@ const signupSchema=mongoose.Schema({
     },
     password:{
         type:String,
-       
-    }
+  
+    },
+   role: {
+    type: String,
+    default: 'customer',
+    enum: ["admin", "customer"]
+}
+
 })
 const Signup = mongoose.model("signups", signupSchema);
 export default Signup;

@@ -2,10 +2,14 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 import './styles.css';
+import Navbar from "./Navbar";
+import Prenav from "./Prenav";
 
 const Western = () => {
   return (
     <div>
+      <Link to="/prenav"><Prenav/></Link>
+    <Link to="/prenavbarnav"><Navbar/></Link>
       <div>
         <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw5ad7d48c/images/plpbanners/Co-Ord-PLP-Desk-1920x225-1.jpg" alt="Sale new" className='salebanner'/>
       </div>

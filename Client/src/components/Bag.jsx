@@ -1,5 +1,6 @@
-// import React, { useRef, useState } from 'react';
-// Import Swiper React components
+import Navbar from "./Navbar";
+import Prenav from "./Prenav";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -15,6 +16,9 @@ import { FreeMode, Pagination } from 'swiper/modules';
 const Bag = () => {
   return (
     <>
+  
+    <Link to="/prenav"><Prenav/></Link>
+    <Link to="/prenavbarnav"><Navbar/></Link>
     <div className='container d-flex flex-column justify-content-center align-items-center'>
       <h2 className='fw-bold'>Your Shopping Cart is Empty</h2>
       <button className='w-25 btn btn-dark mt-3'>CONTINUE SHOPPING</button>

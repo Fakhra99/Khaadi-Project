@@ -2,11 +2,16 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 import './styles.css';
+import Navbar from "./Navbar";
+import Prenav from "./Prenav";
+
 
 const Newin = () => {
   return (
     
     <div>
+      <Link to="/prenav"><Prenav/></Link>
+    <Link to="/prenavbarnav"><Navbar/></Link>
       <div>
         <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw595d78f9/images/plpbanners/PLP-BANNER-DESKTOPNew-in-.jpg" alt="Sale new" className='salebanner'/>
       </div>

@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Spin from './Spin'
+import Spin from './Spin';
+import Navbar from "./Navbar";
+import Prenav from "./Prenav";
+
 
 const WinterCollection = () => {
   const [winterCollectionData, setWinterCollectionData] = useState([]);
@@ -25,11 +28,36 @@ const WinterCollection = () => {
   return (
     
     <div>
+      <Link to="/prenav"><Prenav/></Link>
+    <Link to="/prenavbarnav"><Navbar/></Link>
         {loader ? <Spin/> :null}
       <h1>Winter Collection</h1>
-      <Link to="/wintercollectiondata">
-        <button className='filter'>ADD</button>
-      </Link>
+      <div>
+        <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw5ad7d48c/images/plpbanners/Co-Ord-PLP-Desk-1920x225-1.jpg" alt="Sale new" className='salebanner'/>
+      </div>
+
+      <div>
+        <nav style={{ "--bs-breadcrumb-divider": "'/'" }} aria-label="breadcrumb">
+          <ol className="breadcrumb bcrum">
+            <li className="breadcrumb-item "><Link to="/" className='bcrumLi'>Home</Link></li>
+            <li className="breadcrumb-item active" aria-current="page" style={{fontWeight:"bold"}}>Winter Collection</li>
+          </ol>
+        </nav>
+      </div>
+
+      <div className='d-flex mb-3'>
+        <p className='bcrum'>Sort by</p>
+
+        <select className='bcrumDropdown' >
+        <option selected>Recommended</option>
+        <option value="1">Most Popular</option>
+        <option value="2">New Arrival</option>
+        <option value="3">Price Low To High</option>
+        <option value="3">Price High To Low</option>
+        </select>
+
+        <button className='filter'>FILTER </button>
+      </div>
      
       <div className='row ml-5'>
         {winterCollectionData.map((item) => (
@@ -40,13 +68,14 @@ const WinterCollection = () => {
         alt={item.title}
         className="card-img-top"
       />
-              <p>{item.image}</p>
+              {/* <p>{item.image}</p> */}
               <div className="card-body">
                 <h5 className="card-title">{item.title}</h5>
                 <p className="card-text">{item.description}</p>
                 <p className="card-text" style={{ color: 'red', textDecoration: 'line-through', marginRight: '10px' }}>Original Price: {item.originalPrice}</p>
                 <p className="card-text">Discounted Price: {item.discountedPrice}</p>
               </div>
+              {/* <button className='btn btn-warning'>Add to bag</button> */}
             </div>
           </div>
         ))}

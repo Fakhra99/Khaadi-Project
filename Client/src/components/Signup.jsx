@@ -3,13 +3,16 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './styles.css';
 import { Link } from 'react-router-dom';
 import axios from "axios";
+import Navbar from './Navbar';
+import Prenav from './Prenav';
 
 const Signup = () => {
   const [signupData, setsignupData]=useState({
     Fname:"",
     Lname:"",
     email:"",
-    password:""
+    password:"",
+    role:""
   });
 
   const handleChange = (e) => {
@@ -72,7 +75,8 @@ const handleSubmit = async (e) => {
         Fname: "",
         Lname: "",
         email: "",
-        password: ""
+        password: "",
+        role:""
       });
     } else {
       // Handle signup error (e.g., display error message)
@@ -85,6 +89,9 @@ const handleSubmit = async (e) => {
 
 
   return (
+    <div>
+      <Prenav/>
+      <Navbar/>
       <div className='container signinDiv d-flex flex-column align-items-center'>
       <div className="d-flex justify-content-between w-50 mb-3">
         <Link to="/signin" className='btn  text-dark w-50 signup'>Sign in</Link>
@@ -115,10 +122,10 @@ const handleSubmit = async (e) => {
           <label htmlFor="confirmPassword" className="form-label">Confirm Password <sup style={{ color: "red" }}>*</sup></label>
           <input type="password" className="form-control" id="confirmPassword" />
         </div>
-        {/* <div className="mb-3 form-check">
-          <input type="checkbox" className="form-check-input" id="newsletterSignup" />
-          <label className="form-check-label" htmlFor="newsletterSignup">Signup for Newsletter</label>
-        </div> */}
+       <div className="mb-3">
+          <label htmlFor="role" className="form-label">Role <sup style={{ color: "red" }}>*</sup></label>
+          <input type="text" className="form-control" name='role' value={signupData.role} onChange={handleChange} id="role" placeholder="Are you Admin/Customer" />
+        </div>
         <div className='mb-3'>
           <button className='w-100 btn btn-dark'>CREATE ACCOUNT</button>
         </div>
@@ -130,6 +137,7 @@ const handleSubmit = async (e) => {
           <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dw74c06dcf/images/facebook.svg" alt="" />
         </div>
       </form>
+    </div>
     </div>
   )
 }

@@ -1,7 +1,8 @@
 // in controller we write logic how to recieve data how to get data, delete and update data
 import User from "../models/account.model.js";
 import bcrypt from 'bcrypt';
-import jsonwebtoken from 'jsonwebtoken';
+// import jsonwebtoken from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 import Otp from '../models/otp.model.js';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
@@ -22,14 +23,14 @@ export const register = async (req, res) => {
 
     try {
         console.log("Called")
-        const {Fname, Lname, email, password} = req.body
+        const {Fname, Lname, email, password, role} = req.body
         const existingUser = await User.findOne({ email });
         if (existingUser) {
             return res.status(401).json({ message: "User Already exists" });
         }
         const hashPassword = await bcrypt.hash(password, 10)
 
-        const newUser = new User({Fname,Lname, email, password: hashPassword });
+        const newUser = new User({Fname,Lname, email, password: hashPassword, role });
         await newUser.save()
         res.status(201).json(newUser)
     } catch (error) {
@@ -38,24 +39,47 @@ export const register = async (req, res) => {
 }
 
 //login
-export const login = async (req, res) => {
-    try {
-        console.log("Called")
-        const { email, password} = req.body;
-        const user = await User.findOne({ email });
-        if (!user) {
-            return res.status(404).json({ message: "User not exists" })
-        }
-        const passwordMatch = await bcrypt.compare(password, user.password)
-        if (!passwordMatch) {
-            return res.status(401).json({ message: "Password not matched" })
-        }
-        console.log(user._id)
-        const token = jsonwebtoken.sign({ userId: user._id}, process.env.PRIVATE_KEY, { expiresIn: "2hr" });
-        res.status(200).json({ user, token });
+export const login = async (req, res,next) => {
+    // try {
+    //     console.log("Called")
+    //     const { email, password} = req.body;
+    //     const user = await User.findOne({ email });
+    //     if (!user) {
+    //         return res.status(404).json({ message: "User not exists" })
+    //     }
+    //     const passwordMatch = await bcrypt.compare(password, user.password)
+    //     if (!passwordMatch) {
+    //         return res.status(401).json({ message: "Password not matched" })
+    //     }
+    //     console.log(user._id)
+    //     const token = jsonwebtoken.sign({ userId: user._id}, process.env.PRIVATE_KEY, { expiresIn: "2hr" });
+    //     res.status(200).json({ user, token });
 
-    } catch (error) {
-        res.status(500).json({ message: error.message })
+    // } catch (error) {
+    //     res.status(500).json({ message: error.message })
+    // }
+
+    try{
+        const user = await User.findOne({email: req.body.email});
+        
+        if(!user) return next(console.log("user not found"));
+
+        const isCorrect = bcrypt.compareSync(req.body.password,user.password);
+        if(!isCorrect) return next(console.log(400,"Wrong password or email!"));
+
+        const token = jwt.sign({
+            id: user._id,
+            // 
+            role: user.role
+        },
+        process.env.PRIVATE_KEY, { expiresIn: "30d" })
+// except password all information is store in this info object
+        const {password, ...info} = user._doc;
+        res.cookie("accessToken",token,{
+            httpOnly:true
+        }).status(200).send(info);
+    }catch(err){
+        next(err)
     }
 }
 

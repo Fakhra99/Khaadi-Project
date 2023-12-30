@@ -3,8 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Home from "./components/Home";
 import Signin from "./components/Signin";
-import Navbar from "./components/Navbar";
-import Prenav from "./components/Prenav";
+
 import Salenew from "./components/Salenew";
 import Wintercollection from "./components/Wintercollection";
 import Newin from "./components/Newin";
@@ -17,15 +16,22 @@ import Bag from "./components/Bag";
 import Forgotpassword from "./components/Forgotpassword";
 import ChangePassword from "./components/Changepassword";
 import WintercollectionData from './components/WinterCollectionData'
+import Admin from "./components/Admin/Admin";
+import SignupListing from './components/Admin/SignupListing'
+import SignupDetail from "./components/Admin/SignupDetail";
+import Prenav from "./components/Prenav";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
    
    <>
   
-  <Prenav/>
-   <Navbar/>
+  {/* <Prenav/> */}
+   {/* <Navbar/> */}
    <Routes>
+    <Route path="/prenav" element={<Prenav />} />
+     <Route path="/navbar" element={<Navbar />} />
     <Route path="/" element={<Home />} />
     <Route path="/signin" element={<Signin/>}></Route>
     <Route path="/salenew" element={<Salenew/>}></Route>
@@ -35,6 +41,9 @@ function App() {
     <Route path="/readyToWear" element={<Readytowear/>}></Route>
     <Route path="/western" element={<Western/>}></Route>
     <Route path="/track" element={<Track/>}></Route>
+    <Route path="/adminn" element={<Admin/>}></Route>
+    <Route path="/signuplisting" element= {<SignupListing/>}> </Route>
+    <Route path="signup/:id" element= {<SignupDetail/>}> </Route>
     <Route path="/signup" element={<Signup/>}></Route>
     <Route path="/bag" element={<Bag/>}></Route>
     <Route path="/forgot-password" element={<Forgotpassword/>}></Route>
