@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import dotenv from 'dotenv';
 import cors from 'cors';
 import winterCollRouter from "./routes/winterCollection.route.js";
-
+// import salesCollRouter from "./routes/salesCollection.route.js"
 import AccountRoute from "./routes/account.route.js";
 
 
@@ -16,6 +16,8 @@ dotenv.config();
 app.use(cors());
 
 app.use("/upload",express.static("upload"))
+
+// app.use("/salesUploads",express.static("salesUploads"))
 // Use bodyParser middleware
 app.use(bodyParser.json());
 
@@ -26,6 +28,8 @@ app.use("/api", AccountRoute);
 // app.use("/api", SigninRoute);
 
 app.use("/", winterCollRouter)
+
+// app.use("/", salesCollRouter)
 
 // Extract MongoDB credentials from environment variables
 const username = process.env.USER;

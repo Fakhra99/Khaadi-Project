@@ -3,7 +3,7 @@ import { createWinterCollection, getWinterCollection } from "../controllers/wint
 // import {checkRole} from '../middlewares/middleware.js'
 import multer from 'multer';
 import path from 'path';
-import {  middlewarefunc } from "../middlewares/middleware.js";
+// import {  middlewarefunc } from "../middlewares/middleware.js";
 const router= express.Router();
 
 const storage=multer.diskStorage({
@@ -18,7 +18,7 @@ const upload=multer({
     storage:storage
 })
 // Protected route (requires admin role)
-router.post('/winter-collection', middlewarefunc, upload.single('image'), createWinterCollection);
+router.post('/winter-collection',  upload.single('image'), createWinterCollection);
 // router.post('/winter-collection', checkRole('admin'), upload.single('image'), createWinterCollection);
 router.get("/getwinter-collection", getWinterCollection)
 
