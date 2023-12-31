@@ -556,7 +556,7 @@ position: relative;
     
 }
 
-.btn a{
+.btnL a{
    position: absolute;
    top: 56%;
    left: 73%;
@@ -567,7 +567,7 @@ position: relative;
     border-radius: 4px;
     border: none;
 }
-.btn a:hover{
+.btnL a:hover{
     background-color: white;
     color: black;
 }

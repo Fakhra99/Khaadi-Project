@@ -59,7 +59,7 @@ const Salenew = () => {
         >
           <ol className="breadcrumb bcrum">
             <li className="breadcrumb-item ">
-              <Link to="/" className="bcrumLi">
+              <Link to="/home" className="bcrumLi">
                 Home
               </Link>
             </li>

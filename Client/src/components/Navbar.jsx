@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <div className={`navMain d-flex ${scrollPosition > 50 ? 'sticky' : ''}`}>
       
-        <Link to="/"><img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dw78f1bf68/images/logo.svg" alt="khaadi" className='navMainimg'/> </Link>
+        <Link to="/home"><img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dw78f1bf68/images/logo.svg" alt="khaadi" className='navMainimg'/> </Link>
          <div className='navLink'>
          <Link to="/salenew" ><span style={{color:"#f8643c", fontWeight:"bold"}}>Sale <sup>New</sup></span></Link>
          <Link to="/winterCollection"> Winter collection</Link>

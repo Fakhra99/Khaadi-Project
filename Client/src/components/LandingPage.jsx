@@ -19,7 +19,7 @@ const LandingPage = () => {
           <option value="">Canada</option>
         </select>
       </div>
-      <div className="btn">
+      <div className="btnL">
         <Link to="/home">
           ENTER
         </Link>

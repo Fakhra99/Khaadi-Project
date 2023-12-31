@@ -18,7 +18,7 @@ const Fabrics = () => {
       <div>
         <nav style={{ "--bs-breadcrumb-divider": "'/'" }} aria-label="breadcrumb">
           <ol className="breadcrumb bcrum">
-            <li className="breadcrumb-item "><Link to="/" className='bcrumLi'>Home</Link></li>
+            <li className="breadcrumb-item "><Link to="/home" className='bcrumLi'>Home</Link></li>
             <li className="breadcrumb-item active" aria-current="page" style={{fontWeight:"bold"}}>Fabrics</li>
           </ol>
         </nav>

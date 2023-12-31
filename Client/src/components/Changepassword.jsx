@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const ChangePassword = () => {
   const [email, setEmail] = useState('');
@@ -108,7 +109,9 @@ const ChangePassword = () => {
           </div>
           {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
           <div className='mb-3'>
+            <Link to="/signin">
             <button className='w-100 btn btn-dark' type='submit'>Change Password</button>
+            </Link>
           </div>
         </form>
       </div>

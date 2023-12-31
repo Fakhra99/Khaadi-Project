@@ -42,7 +42,7 @@ const Signin = () => {
 
         if (userRole === 'customer') {
           // Navigate to the home page
-          navigate('/');
+          navigate('/home');
         } else if (userRole === 'admin') {
           // Navigate to the admin dashboard
           navigate('/adminn');
