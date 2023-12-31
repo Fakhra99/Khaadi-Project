@@ -131,7 +131,9 @@ export const update=async(req,res)=>{
     try{
         const {id}=req.params;
         const payload=req.body;        
-        const contact=await User.findOneAndUpdate({_id:id},payload,{new:true})
+        // const contact=await User.findOneAndUpdate({_id:id},payload,{new:true})
+        const contact = await User.findOneAndUpdate({ _id: id }, payload, { new: true });
+
         if(!contact){
             return res.json({status:404,message:"Contact not found",success:false})
         }
