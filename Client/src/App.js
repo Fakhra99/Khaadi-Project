@@ -23,6 +23,8 @@ import Prenav from "./components/Prenav";
 import Navbar from "./components/Navbar";
 import UpdateContact from "./components/Admin/UpdateAccount";
 
+import Footer from "./components/Footer"
+
 function App() {
   return (
    
@@ -53,6 +55,7 @@ function App() {
     <Route path="/wintercollectiondata" element={<WintercollectionData/>}></Route>
 
    </Routes>
+   <Footer/>
     </>
   );
 }
