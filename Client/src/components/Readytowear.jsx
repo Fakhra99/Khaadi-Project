@@ -9,8 +9,8 @@ import Prenav from "./Prenav";
 const Readytowear = () => {
   return (
     <div>
-      <Link to="/prenav"><Prenav/></Link>
-    <Link to="/prenavbarnav"><Navbar/></Link>
+     <Prenav/>
+    <Navbar/>
       <div>
         <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw93b9438a/images/plpbanners/WinterEssen-PLP-Desk-1920x225-1.jpg" alt="Sale new" className='salebanner'/>
       </div>

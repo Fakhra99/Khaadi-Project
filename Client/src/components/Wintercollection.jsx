@@ -28,8 +28,8 @@ const WinterCollection = () => {
   return (
     
     <div>
-      <Link to="/prenav"><Prenav/></Link>
-    <Link to="/prenavbarnav"><Navbar/></Link>
+      <Prenav/>    
+      <Navbar/>
         {loader ? <Spin/> :null}
       <h1>Winter Collection</h1>
       <div>
@@ -70,7 +70,7 @@ const WinterCollection = () => {
       />
               {/* <p>{item.image}</p> */}
               <div className="card-body">
-                <h5 className="card-title">{item.title}</h5>
+                <p className="card-title fw-bold">{item.title}</p>
                 <p className="card-text">{item.description}</p>
                 <p className="card-text" style={{ color: 'red', textDecoration: 'line-through', marginRight: '10px' }}>Original Price: {item.originalPrice}</p>
                 <p className="card-text">Discounted Price: {item.discountedPrice}</p>

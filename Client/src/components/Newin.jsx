@@ -10,8 +10,8 @@ const Newin = () => {
   return (
     
     <div>
-      <Link to="/prenav"><Prenav/></Link>
-    <Link to="/prenavbarnav"><Navbar/></Link>
+    <Prenav/>
+    <Navbar/>
       <div>
         <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw595d78f9/images/plpbanners/PLP-BANNER-DESKTOPNew-in-.jpg" alt="Sale new" className='salebanner'/>
       </div>

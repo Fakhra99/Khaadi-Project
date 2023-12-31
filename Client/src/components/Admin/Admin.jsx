@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import './stylesAdmin.css';
 import SignupListing from './SignupListing';
 
-
 const Admin = () => {
    const [showSignupListing, setShowSignupListing] = useState(false);
 
@@ -39,7 +38,7 @@ const Admin = () => {
 
         <div className="col mb-4">
           <div className="card">
-            <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw070c9289/images/hi-res/lk231104_red_5.jpg?sw=400&sh=600" className="card-img-top" alt="New Ins" />
+            <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwdc809ad9/images/hi-res/ala230926_black_2.jpg?sw=800&sh=1200" className="card-img-top" alt="New Ins" />
             <div className="card-body">
               <Link to="/wintercollectiondata" className="card-link">
                 <button className='collectionBtns btn btn-warning btn-block w-100'>ADD New Ins</button>
@@ -50,7 +49,7 @@ const Admin = () => {
 
         <div className="col mb-4">
           <div className="card">
-            <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw0f2bad25/images/hi-res/blk231103_red_2.jpg?sw=400&sh=600" className="card-img-top" alt="Fabrics" />
+            <img src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw2542c8a5/images/hi-res/ala230926_blue_2.jpg?sw=800&sh=1200" className="card-img-top" alt="Fabrics" />
             <div className="card-body">
               <Link to="/wintercollectiondata" className="card-link">
                 <button className='collectionBtns btn btn-warning btn-block w-100'>Add Fabrics</button>

@@ -9,8 +9,8 @@ import Prenav from "./Prenav";
 const Fabrics = () => {
   return (
     <div>
-       <Link to="/prenav"><Prenav/></Link>
-    <Link to="/prenavbarnav"><Navbar/></Link>
+    <Prenav/>
+    <Navbar/>
       <div>
         <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw84fdb156/images/plpbanners/Fabrics-PrintStory-PLP-Desk-1920x225-1.jpg" alt="Sale new" className='salebanner'/>
       </div>
