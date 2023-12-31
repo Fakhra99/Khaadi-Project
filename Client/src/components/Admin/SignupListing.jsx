@@ -16,8 +16,9 @@ const SignupListing = () => {
     const fetchSignups = async () => {
   try {
     // Get the authentication token from your storage (localStorage, sessionStorage, cookies, etc.)
-    const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OGQ2NmIxNDgxZjViODNkZTA1MTljMiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcwMzk0MTkzOSwiZXhwIjoxNzAzOTQ5MTM5fQ.S_L41Dk6bsnypg6aqnmoCSc958t3r2GeGdiaog7x6Qw";
-
+    const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OGQ2NmIxNDgxZjViODNkZTA1MTljMiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcwNDAwMDg0NiwiZXhwIjoxNzA2NTkyODQ2fQ.0BLZCKYMPFcGzYjbSLaaRthHaHJ4q3isLmJFBhB13Kg";
+    // const authToken= cookies.get("accessToken")
+    console.log(authToken)
     const response = await axios.get("http://localhost:4041/api/allcontacts", {
       headers: {
         Authorization: `Bearer ${authToken}`,
@@ -41,10 +42,21 @@ const SignupListing = () => {
     }
 
 // update
-  const handleUpdate=async(id)=>{
-  const response=await axios.put(`http://localhost:4041/api/update/${id}`)
-  fetchSignups();
-}
+//   const handleUpdate=async(id)=>{
+//   // const response=await axios.put(`http://localhost:4041/api/update/${id}`)
+//   const response = await axios.put(`http://localhost:4041/api/update/${id}`, {});
+//   fetchSignups();
+// }
+const handleUpdate = async (id) => {
+  try {
+    const response = await axios.put(`http://localhost:4041/api/update/${id}`, {});
+    console.log(response.data); // Log the response to check server's response
+    fetchSignups();
+  } catch (error) {
+    console.error("Error updating contact:", error);
+  }
+};
+
 
  useEffect(() => {
     const fetchData = async () => {

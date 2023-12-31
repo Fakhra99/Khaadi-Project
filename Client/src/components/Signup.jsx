@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import Navbar from './Navbar';
 import Prenav from './Prenav';
@@ -14,7 +14,7 @@ const Signup = () => {
     password:"",
     role:""
   });
-
+   const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setsignupData((prevData) => ({
@@ -78,6 +78,8 @@ const handleSubmit = async (e) => {
         password: "",
         role:""
       });
+
+      navigate('/signin')
     } else {
       // Handle signup error (e.g., display error message)
       console.error('Signup failed. Server response:', response.data);

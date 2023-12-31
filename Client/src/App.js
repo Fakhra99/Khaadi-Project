@@ -21,6 +21,7 @@ import SignupListing from './components/Admin/SignupListing'
 import SignupDetail from "./components/Admin/SignupDetail";
 import Prenav from "./components/Prenav";
 import Navbar from "./components/Navbar";
+import UpdateContact from "./components/Admin/UpdateAccount";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
     <Route path="/track" element={<Track/>}></Route>
     <Route path="/adminn" element={<Admin/>}></Route>
     <Route path="/signuplisting" element= {<SignupListing/>}> </Route>
+    <Route path="/update-contact/:id" element= {<UpdateContact/>}> </Route>
     <Route path="signup/:id" element= {<SignupDetail/>}> </Route>
     <Route path="/signup" element={<Signup/>}></Route>
     <Route path="/bag" element={<Bag/>}></Route>
