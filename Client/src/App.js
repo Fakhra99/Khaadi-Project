@@ -22,7 +22,7 @@ import SignupDetail from "./components/Admin/SignupDetail";
 import Prenav from "./components/Prenav";
 import Navbar from "./components/Navbar";
 import UpdateContact from "./components/Admin/UpdateAccount";
-
+import LandingPage from "./components/LandingPage"
 import Footer from "./components/Footer"
 
 function App() {
@@ -33,9 +33,11 @@ function App() {
   {/* <Prenav/> */}
    {/* <Navbar/> */}
    <Routes>
+    <Route path="/" element={<LandingPage />} />
     <Route path="/prenav" element={<Prenav />} />
      <Route path="/navbar" element={<Navbar />} />
-    <Route path="/" element={<Home />} />
+    {/* <Route path="/" element={<Home />} /> */}
+    <Route path="/home" element={<Home />} />
     <Route path="/signin" element={<Signin/>}></Route>
     <Route path="/salenew" element={<Salenew/>}></Route>
     <Route path="/winterCollection" element={<Wintercollection/>}></Route>
