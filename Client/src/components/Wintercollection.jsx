@@ -5,7 +5,6 @@ import Spin from './Spin';
 import Navbar from "./Navbar";
 import Prenav from "./Prenav";
 
-
 const WinterCollection = () => {
   const [winterCollectionData, setWinterCollectionData] = useState([]);
   const [loader,setLoader]=useState(true)
