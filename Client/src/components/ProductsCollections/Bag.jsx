@@ -32,7 +32,8 @@ const Bag = () => {
               <img src={item.imageUrl} alt={item.title} className="card-img-top" />
               <div className="card-body">
                 <h5 className="card-title">{item.title}</h5>
-                <p className="card-text">Price: ${item.price}</p>
+                {/* <p className="card-text">Price: Rs{item.originalPrice}</p> */}
+                <p className="card-text">Price: RS{item.discountedprice}</p>
               </div>
             </div>
           </div>
