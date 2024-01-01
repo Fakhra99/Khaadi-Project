@@ -7,43 +7,91 @@ import { addToCart } from "../../features/cartSlice/cartSlice";
 import Prenav from "../PrenavAndNavbar/Prenav";
 import Navbar from "../PrenavAndNavbar/Navbar";
 const productsData = [
+  // addin test
+  {
+    imageUrl:
+        "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw7a83b8b8/images/hi-res/lla230810_red_1.jpg?sw=800&sh=1200",
+    title: "Printed Lawn | Top Dupatta",
+    description: "Fabrics 2 piece",
+    originalPrice:"2200",
+    discountedprice: "1,500",
+    id: "acw12"
+  },
+
   {
     imageUrl:
       "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw541fcf91/images/hi-res/ala230806_teal_1.jpg?sw=800&sh=1200",
     title: "Printed Lawn | Top Dupatta",
-    price: "1,500",
+    description: "Fabrics 2 piece",
+    originalPrice:"2200",
+    discountedprice: "1,500",
+     id: "abw12"
   },
   {
     imageUrl:
       "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwf1f6602f/images/hi-res/bla230806_black_1.jpg?sw=800&sh=1200",
     title: "Printed Lawn | Top Dupatta",
-    price: "1,900",
+    description: "Fabrics 2 piece",
+    originalPrice:"2200",
+    discountedprice: "1,900",
+     id: "a6w12"
   },
   {
     imageUrl:
       "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw75f51f17/images/hi-res/ala230821_teal_1.jpg?sw=800&sh=1200",
     title: "Printed Lawn | Top Dupatta",
-    price: "2,000",
+    description: "Fabrics 2 piece",
+    originalPrice:"2200",
+    discountedprice: "2,000",
+     id: "aiw12"
   },
   {
     imageUrl:
-      "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw541fcf91/images/hi-res/ala230806_teal_1.jpg?sw=800&sh=1200",
+      "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwbad0fffc/images/hi-res/est23479_grey_2.jpg?sw=400&sh=600",
     title: "Printed Lawn | Top Dupatta",
-    price: "2,500",
-  },
-  
-  
-  
+    description: "Fabrics 2 piece",
+    originalPrice:"2200",
+    discountedprice: "2,500",
+     id: "acu12"
+  }, 
+
+   {
+    imageUrl:
+      "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwc175d264/images/hi-res/est23480_multi_2.jpg?sw=400&sh=600",
+    title: "Printed Lawn | Top Dupatta",
+    description: "Fabrics 2 piece",
+    originalPrice:"2200",
+    discountedprice: "2,500",
+     id: "agw12"
+  }, 
+
+   {
+    imageUrl:
+      "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwf1459138/images/hi-res/est23483_purple_2.jpg?sw=400&sh=600",
+    title: "Printed Lawn | Top Dupatta",
+    description: "Fabrics 2 piece",
+    originalPrice:"2200",
+    discountedprice: "2,500",
+     id: "bcw12"
+  }, 
+
+   {
+    imageUrl:
+      "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw72cd4d37/images/hi-res/est23482_green_2.jpg?sw=400&sh=600",
+    title: "Printed Lawn | Top Dupatta",
+    description: "Fabrics 2 piece",
+    originalPrice:"2200",
+    discountedprice: "2,500",
+     id: "aco12"
+  }, 
 ];
 
 const Salenew = () => {
-
   const dispatch = useDispatch()
   return (
     <div>
        <Prenav/>
       <Navbar/>
-     
       <div>
         <img
           src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw1c55b206/images/plpbanners/PLP-BANNER-DESKTOP-SALE.jpg"
@@ -76,161 +124,49 @@ const Salenew = () => {
 
       <div className="d-flex mb-3">
         <p className="bcrum">Sort by</p>
-
-        <select className="bcrumDropdown">
-          <option selected>Recommended</option>
-          <option value="1">Most Popular</option>
-          <option value="2">New Arrival</option>
-          <option value="3">Price Low To High</option>
-          <option value="3">Price High To Low</option>
-        </select>
-
         <button className="filter">FILTER </button>
       </div>
 
       <div className="d-flex ml-5 align-item-center justify-content-evenly">
-        <div className="card" style={{ width: "20rem" }}>
-          <img
-            src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw7a83b8b8/images/hi-res/lla230810_red_1.jpg?sw=800&sh=1200"
-            className="card-img-top card1"
-            alt="cardimg"
-          />
-          <div className="card-body">
-            <button to="#" className="Addbtn">
-              Add To Bag
-            </button>
-            <p>
-              <Link style={{ textDecoration: "none", color: "black" }}>
-                Fabrics 2 Piece
-              </Link>
-            </p>
-            <p style={{ marginTop: "1px" }}> Printed Lawn | Top Dupatta</p>
-            <p>
-              <span
-                className="text-decoration-line-through"
-                style={{ marginRight: "10px" }}
-              >
-                Rs 2,390
-              </span>{" "}
-              <span className="text-danger">Rs 1,673</span>
-            </p>
-          </div>
-        </div>
-        <div class="card" style={{ width: "20rem", position: "relative" }}>
-          <img
-            src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwe0f16618/images/hi-res/ala230820_black_1.jpg?sw=800&sh=1200"
-            className="card-img-top card2"
-            alt="cardimg"
-          />
-          <div class="card-body">
-            <button to="#" className="Addbtn">
-              Add To Bag
-            </button>
-            <p>
-              <Link style={{ textDecoration: "none", color: "black" }}>
-                Fabrics 2 Piece
-              </Link>
-            </p>
-            <p style={{ marginTop: "1px" }}> Printed Lawn | Top Dupatta</p>
-            <p>
-              <span
-                className="text-decoration-line-through"
-                style={{ marginRight: "10px" }}
-              >
-                Rs 2,390
-              </span>{" "}
-              <span className="text-danger">Rs 1,673</span>
-            </p>
-          </div>
-        </div>
-        <div class="card" style={{ width: "20rem" }}>
-          <img
-            src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwda876d8c/images/hi-res/lla230810_teal_1.jpg?sw=800&sh=1200"
-            className="card-img-top card3"
-            alt="..."
-          />
-          <div class="card-body">
-            <button to="#" className="Addbtn">
-              Add To Bag
-            </button>
-            <p>
-              <Link style={{ textDecoration: "none", color: "black" }}>
-                Fabrics 2 Piece
-              </Link>
-            </p>
-            <p style={{ marginTop: "1px" }}> Printed Lawn | Top Dupatta</p>
-            <p>
-              <span
-                className="text-decoration-line-through"
-                style={{ marginRight: "10px" }}
-              >
-                Rs 2,390
-              </span>{" "}
-              <span className="text-danger">Rs 1,673</span>
-            </p>
-          </div>
-        </div>
-        <div class="card" style={{ width: "20rem" }}>
-          <img
-            src="https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw43db13af/images/hi-res/bla230806_pink_1.jpg?sw=800&sh=1200"
-            className="card-img-top card4"
-            alt="..."
-          />
-          <div class="card-body">
-            <button to="#" className="Addbtn">
-              Add To Bag
-            </button>
-            <p>
-              <Link style={{ textDecoration: "none", color: "black" }}>
-                Fabrics 2 Piece
-              </Link>
-            </p>
-            <p style={{ marginTop: "1px" }}> Printed Lawn | Top Dupatta</p>
-            <p>
-              <span
-                className="text-decoration-line-through"
-                style={{ marginRight: "10px" }}
-              >
-                Rs 2,390
-              </span>{" "}
-              <span className="text-danger">Rs 1,673</span>
-            </p>
-          </div>
-        </div>
       </div>
-
-      <div className="d-flex ml-5 align-item-center justify-content-evenly">
+      <div className="d-flex flex-wrap ml-5 align-item-center justify-content-evenly">
         {productsData.map((product, index) => (
-          <div class="card" style={{ width: "20rem" }}>
-            <img
-              className="card-img-top card5"
-              alt="..."
-              src={product.imageUrl}
-            />
-            <div class="card-body">
-             <button className="Addbtn" onClick={() => dispatch(addToCart(product))}>
-                Add To Bag
-              </button>
+         <div className="card mb-4" style={{ width: "18rem" }} key={index}>
+      <img
+        className="card-img-top card5"
+        alt="..."
+        src={product.imageUrl}
+      />
+      <div className="card-body">
+        <button
+          className="Addbag"
+          onClick={() => dispatch(addToCart(product))}
+        >
+          Add To Bag
+        </button>
 
-              <p>
-                <Link style={{ textDecoration: "none", color: "black" }}>
-                  Fabrics 2 Piece
-                </Link>
-              </p>
-              <p style={{ marginTop: "1px" }}>{product.title}</p>
-              <p>
-                <span
-                  className="text-decoration-line-through"
-                  style={{ marginRight: "10px" }}
-                >
-                  Rs 2,390
-                </span>{" "}
-                <span className="text-danger">Rs {product.price}</span>
-              </p>
-            </div>
-          </div>
-        ))}
+        {/* <p>
+          <Link style={{ textDecoration: "none", color: "black" }}>
+            Fabrics 2 Piece
+          </Link>
+        </p> */}
+       
+        <p style={{ marginTop: "1px" }}>{product.title}</p>
+         <p style={{ marginTop: "1px" }}>{product.description}</p>
+        <p>
+          <span
+            className="text-decoration-line-through"
+            style={{ marginRight: "10px" }}
+          >
+            {product.originalPrice}
+          </span>{" "}
+          <span className="text-danger">Rs {product.discountedprice}</span>
+        </p>
       </div>
+    </div>
+  ))}
+</div>
+
       
     </div>
     

@@ -1,7 +1,7 @@
 // import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { Link } from "react-router-dom";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -25,6 +25,7 @@ const Bag = () => {
        <div className="container d-flex flex-column justify-content-center align-items-center">
     {items?.length > 0 ? (
       <div className="row card-container">
+        <h4>Your items</h4>
         {items.map((item, index) => (
           <div key={index} className="col-6 col-md-4 mb-4">
             <div className="card">
@@ -40,7 +41,9 @@ const Bag = () => {
     ) : (
       <div className="empty-cart">
         <h2 className="fw-bold">Your Shopping Cart is Empty</h2>
+        <Link to="/salenew">
        <button className="w-50 btn btn-dark mt-3 btnC">CONTINUE SHOPPING</button>
+       </Link>
       </div>
     )}
     <h3 className="w-25 mt-4">YOU MAY ALSO LIKE</h3>

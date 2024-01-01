@@ -297,6 +297,20 @@ body {
   color: white;
 }
 
+.Addbag{
+    width: 285px;
+  margin-left: 1px;
+  /* margin-bottom: 0px; */
+  position:absolute;
+  left: 0px;
+  top: 430px;
+  border: none;
+}
+
+.Addbag:hover{
+  background-color: #000;
+  color: white;
+}
 .s1{
   position: relative;
 }
