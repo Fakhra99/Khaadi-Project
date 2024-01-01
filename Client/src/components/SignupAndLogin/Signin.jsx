@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import './styles.css';
+import '../Styles/styles.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import PreNav from './Prenav';
-import Navbar from './Navbar'
+import Navbar from '../PrenavAndNavbar/Navbar';
+import Prenav from '../PrenavAndNavbar/Prenav';
 
 const Signin = () => {
   const navigate = useNavigate();  // Initialize the navigate hook
@@ -58,7 +58,7 @@ const Signin = () => {
   };
   return (
    <div>
-    <PreNav/>
+    <Prenav/>
     <Navbar/>
     <div className='container signinDiv mt-5 d-flex justify-content-center align-items-center'>
       <div className="w-50">

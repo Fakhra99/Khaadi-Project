@@ -9,12 +9,12 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const exists = state.items.find(
-        (item) => item.title === action.payload.title
-      );
-      if (!exists) {
+      // const exists = state.items.find(
+        // (item) => item.title === action.payload.title
+      // );
+      // if (!exists) {
         state.items.push(action.payload);
-      }
+      // }
     },
   },
   extraReducers: () => {},

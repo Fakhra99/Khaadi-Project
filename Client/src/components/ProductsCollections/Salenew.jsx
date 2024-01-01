@@ -1,11 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Link } from "react-router-dom";
-import "./styles.css";
+import "../Styles/styles.css";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../features/cartSlice/cartSlice";
-import Prenav from "./Prenav";
-import Navbar from "./Navbar";
+import { addToCart } from "../../features/cartSlice/cartSlice";
+import Prenav from "../PrenavAndNavbar/Prenav";
+import Navbar from "../PrenavAndNavbar/Navbar";
 const productsData = [
   {
     imageUrl:
@@ -208,9 +208,10 @@ const Salenew = () => {
               src={product.imageUrl}
             />
             <div class="card-body">
-              <button className="Addbtn" onClick={()=> dispatch(addToCart(product))}>
+             <button className="Addbtn" onClick={() => dispatch(addToCart(product))}>
                 Add To Bag
               </button>
+
               <p>
                 <Link style={{ textDecoration: "none", color: "black" }}>
                   Fabrics 2 Piece

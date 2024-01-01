@@ -7,22 +7,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import './styles.css';
+import '../Styles/styles.css';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
 
-const Swiper3 = () => {
+const Swiper4 = () => {
   return (
     <div className='mt-2'>
         <div className='row'>
-            <div className='col-md-6'>
-                <div className='swiper3Img'>
-                  <h3 style={{marginLeft:"730px"}}>Western</h3>
-                    <div className='swiper1Clipimg'></div>
-                </div>
-            </div>
-            <div className='col-md-5 mt-5 mb-5' style={{marginLeft:"30px", height:"400px"}}>
+           
+            <div className='col-md-5 mt-5 mb-5' style={{marginLeft:"110px", height:"400px"}}>
                 <Swiper
         slidesPerView={2}
         spaceBetween={10}
@@ -39,10 +34,17 @@ const Swiper3 = () => {
          <SwiperSlide className='slide5'><button to="#" className="addTobag" >Add To Bag</button></SwiperSlide>
       </Swiper>
             </div>
+
+         <div className='col-md-6'>
+                <div className='swiper4Img'>
+                  <h3 style={{marginLeft:"-550px"}}>Sale</h3>
+                    <div className='swiper2_4Clipimg'></div>
+                </div>
+            </div>    
         </div>
 
     </div>
   )
 }
 
-export default Swiper3
+export default Swiper4

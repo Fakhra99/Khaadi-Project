@@ -1,24 +1,25 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
-import './styles.css';
-import Navbar from "./Navbar";
-import Prenav from "./Prenav";
+import '../Styles/styles.css';
+import Navbar from "../PrenavAndNavbar/Navbar";
+import Prenav from "../PrenavAndNavbar/Prenav";
 
-const Western = () => {
+
+const Readytowear = () => {
   return (
     <div>
-      <Prenav/>
+     <Prenav/>
     <Navbar/>
       <div>
-        <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw5ad7d48c/images/plpbanners/Co-Ord-PLP-Desk-1920x225-1.jpg" alt="Sale new" className='salebanner'/>
+        <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw93b9438a/images/plpbanners/WinterEssen-PLP-Desk-1920x225-1.jpg" alt="Sale new" className='salebanner'/>
       </div>
 
       <div>
         <nav style={{ "--bs-breadcrumb-divider": "'/'" }} aria-label="breadcrumb">
           <ol className="breadcrumb bcrum">
             <li className="breadcrumb-item "><Link to="/home" className='bcrumLi'>Home</Link></li>
-            <li className="breadcrumb-item active" aria-current="page" style={{fontWeight:"bold"}}>Western</li>
+            <li className="breadcrumb-item active" aria-current="page" style={{fontWeight:"bold"}}>Ready To Wear</li>
           </ol>
         </nav>
       </div>
@@ -123,4 +124,4 @@ const Western = () => {
   );
 }
 
-export default Western;
+export default Readytowear;

@@ -1,25 +1,26 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
-import './styles.css';
- import Navbar from "./Navbar";
-import Prenav from "./Prenav";
+import '../Styles/styles.css';
+import Navbar from "../PrenavAndNavbar/Navbar";
+import Prenav from "../PrenavAndNavbar/Prenav";
 
 
-const Fabrics = () => {
+const Newin = () => {
   return (
+    
     <div>
     <Prenav/>
     <Navbar/>
       <div>
-        <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw84fdb156/images/plpbanners/Fabrics-PrintStory-PLP-Desk-1920x225-1.jpg" alt="Sale new" className='salebanner'/>
+        <img src="https://pk.khaadi.com/on/demandware.static/-/Sites-storefront-catalog-pak/default/dw595d78f9/images/plpbanners/PLP-BANNER-DESKTOPNew-in-.jpg" alt="Sale new" className='salebanner'/>
       </div>
 
       <div>
         <nav style={{ "--bs-breadcrumb-divider": "'/'" }} aria-label="breadcrumb">
           <ol className="breadcrumb bcrum">
             <li className="breadcrumb-item "><Link to="/home" className='bcrumLi'>Home</Link></li>
-            <li className="breadcrumb-item active" aria-current="page" style={{fontWeight:"bold"}}>Fabrics</li>
+            <li className="breadcrumb-item active" aria-current="page" style={{fontWeight:"bold"}}>New in</li>
           </ol>
         </nav>
       </div>
@@ -124,4 +125,4 @@ const Fabrics = () => {
   );
 }
 
-export default Fabrics;
+export default Newin;

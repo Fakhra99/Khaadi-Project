@@ -1,5 +1,5 @@
 import React from 'react'
-import "./LoaderSpin.css"
+import "../Styles/styles.css"
 
 const Spin = () => {
   return (

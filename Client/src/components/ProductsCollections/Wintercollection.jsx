@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Spin from './Spin';
-import Navbar from "./Navbar";
-import Prenav from "./Prenav";
+import Navbar from "../PrenavAndNavbar/Navbar";
+import Prenav from "../PrenavAndNavbar/Prenav";
 
 const WinterCollection = () => {
   const [winterCollectionData, setWinterCollectionData] = useState([]);
@@ -47,13 +47,13 @@ const WinterCollection = () => {
       <div className='d-flex mb-3'>
         <p className='bcrum'>Sort by</p>
 
-        <select className='bcrumDropdown' >
+        {/* <select className='bcrumDropdown' >
         <option selected>Recommended</option>
         <option value="1">Most Popular</option>
         <option value="2">New Arrival</option>
         <option value="3">Price Low To High</option>
         <option value="3">Price High To Low</option>
-        </select>
+        </select> */}
 
         <button className='filter'>FILTER </button>
       </div>

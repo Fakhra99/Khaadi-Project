@@ -7,19 +7,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import './styles.css';
+import '../Styles/styles.css';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
 
-const Swiper1 = () => {
+const Swiper3 = () => {
   return (
     <div className='mt-2'>
         <div className='row'>
             <div className='col-md-6'>
-
-                <div className='swiper1Img'>
-                  <h3 style={{marginLeft:"730px"}}>Fabrics</h3>
+                <div className='swiper3Img'>
+                  <h3 style={{marginLeft:"730px"}}>Western</h3>
                     <div className='swiper1Clipimg'></div>
                 </div>
             </div>
@@ -33,10 +32,8 @@ const Swiper1 = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide className='slide1'>
-          <button to="#" className="addTobag" >Add To Bag</button>
-        </SwiperSlide>
-        <SwiperSlide className='slide2 s1'><button to="#" className="addTobag" >Add To Bag</button></SwiperSlide>
+        <SwiperSlide className='slide1'><button to="#" className="addTobag" >Add To Bag</button></SwiperSlide>
+        <SwiperSlide className='slide2'><button to="#" className="addTobag" >Add To Bag</button></SwiperSlide>
         <SwiperSlide className='slide3'><button to="#" className="addTobag" >Add To Bag</button></SwiperSlide>
         <SwiperSlide className='slide4'><button to="#" className="addTobag" >Add To Bag</button></SwiperSlide>
          <SwiperSlide className='slide5'><button to="#" className="addTobag" >Add To Bag</button></SwiperSlide>
@@ -48,4 +45,4 @@ const Swiper1 = () => {
   )
 }
 
-export default Swiper1
+export default Swiper3

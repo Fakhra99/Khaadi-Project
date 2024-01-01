@@ -1,7 +1,7 @@
 import React from 'react';
-import './styles.css'
-import Navbar from "./Navbar";
-import Prenav from "./Prenav";
+import '../Styles/styles.css'
+import Navbar from "../PrenavAndNavbar/Navbar";
+import Prenav from "../PrenavAndNavbar/Prenav";
 import { Link } from 'react-router-dom';
 
 const Track = () => {

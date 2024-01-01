@@ -6,8 +6,8 @@ import Swiper1 from './Swiper1';
 import Swiper2 from './Swiper2';
 import Swiper3 from './Swiper3';
 import Swiper4 from './Swiper4';
-import Prenav from './Prenav';
-import Navbar from './Navbar';
+import Prenav from '../PrenavAndNavbar/Prenav';
+import Navbar from '../PrenavAndNavbar/Navbar';
 
 const Home = () => {
   return (

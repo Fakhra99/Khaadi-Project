@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './styles.css';
+import '../Styles/styles.css';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -37,10 +37,10 @@ const Navbar = () => {
         </Link>
       </div>
       <div>
-        <Link to="/adminn">
+        {/* <Link to="/adminn"> */}
         <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dw94606d2f/images/search.svg" alt="search" style={{height:"20px", width:"25px", marginRight:"15px"}}/>
         <p style={{ color: 'black', textDecoration: 'none' , fontSize:"12px"}}>Search</p>
-        </Link>
+        {/* </Link> */}
       </div>
       <div>
         <Link to="/signin">

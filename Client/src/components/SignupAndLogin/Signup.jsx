@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import './styles.css';
+import '../Styles/styles.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
-import Navbar from './Navbar';
-import Prenav from './Prenav';
+import Navbar from '../PrenavAndNavbar/Navbar';
+import Prenav from '../PrenavAndNavbar/Prenav';
 
 const Signup = () => {
   const [signupData, setsignupData]=useState({

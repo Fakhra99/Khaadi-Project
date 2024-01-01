@@ -7,28 +7,44 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { useSelector } from "react-redux";
-import "./styles.css";
-import Prenav from "./Prenav";
-import Navbar from "./Navbar";
+import "../Styles/styles.css";
+import Prenav from "../PrenavAndNavbar/Prenav";
+import Navbar from "../PrenavAndNavbar/Navbar";
 
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
 
 const Bag = () => {
   const { items } = useSelector((state) => state.cart);
+  console.log("display item here",items)
   return (
     <>
     <Prenav/>
     <Navbar/>
-      <div className="container d-flex flex-column justify-content-center align-items-center">
-        {items?.length > 0 ? (
-          items.map((item, index) => <h1 key={index}>{item.title}</h1>)
-        ) : (
-          <h2 className="fw-bold">Your Shopping Cart is Empty</h2>
-        )}
-        <button className="w-25 btn btn-dark mt-3">CONTINUE SHOPPING</button>
-        <h3 className="w-25 mt-4">YOU MAY ALSO LIKE</h3>
+
+       <div className="container d-flex flex-column justify-content-center align-items-center">
+    {items?.length > 0 ? (
+      <div className="row card-container">
+        {items.map((item, index) => (
+          <div key={index} className="col-6 col-md-4 mb-4">
+            <div className="card">
+              <img src={item.imageUrl} alt={item.title} className="card-img-top" />
+              <div className="card-body">
+                <h5 className="card-title">{item.title}</h5>
+                <p className="card-text">Price: ${item.price}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
+    ) : (
+      <div className="empty-cart">
+        <h2 className="fw-bold">Your Shopping Cart is Empty</h2>
+       <button className="w-50 btn btn-dark mt-3 btnC">CONTINUE SHOPPING</button>
+      </div>
+    )}
+    <h3 className="w-25 mt-4">YOU MAY ALSO LIKE</h3>
+  </div>
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
