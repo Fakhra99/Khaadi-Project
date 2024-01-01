@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import React, {useState,useEffect} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import cookies from 'js-cookie';
+// import cookies from 'js-cookie';
 
 const SignupListing = () => {
     const [signups, setSignups] = useState([]);
