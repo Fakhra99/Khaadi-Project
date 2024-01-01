@@ -3,15 +3,6 @@ import '../Styles/styles.css';
 import { Link } from 'react-router-dom';
 
 const Prenav = () => {
-    // add classes for styling
-    // const pstyles=()=>{
-    // const preNavstyle=document.getElementsByClassName('preNav');
-    // preNavstyle.classList.add('preNav');
-
-    // const ShopNow=document.getElementsByClassName('shopNow');
-    // ShopNow.classList.add('shopNow');
-    // };
-   
     // prenav content
     return (
     <div className='preNav'>

@@ -1,22 +1,10 @@
 // in controller we write logic how to recieve data how to get data, delete and update data
 import User from "../models/account.model.js";
 import bcrypt from 'bcrypt';
-// import jsonwebtoken from 'jsonwebtoken';
 import jwt from 'jsonwebtoken';
 import Otp from '../models/otp.model.js';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
-
-// export const signupUser=async(req,res)=>{
-//     try{
-//         const payload=req.body;
-//         const signup=await Signup.create(payload)
-//         return res.json({status:201,message:"signup Successfully",success:true,signup})
-//     }
-//     catch(err){
-// console.log(err)
-//     }
-// }
 
 // register
 export const register = async (req, res) => {
@@ -40,25 +28,6 @@ export const register = async (req, res) => {
 
 //login
 export const login = async (req, res,next) => {
-    // try {
-    //     console.log("Called")
-    //     const { email, password} = req.body;
-    //     const user = await User.findOne({ email });
-    //     if (!user) {
-    //         return res.status(404).json({ message: "User not exists" })
-    //     }
-    //     const passwordMatch = await bcrypt.compare(password, user.password)
-    //     if (!passwordMatch) {
-    //         return res.status(401).json({ message: "Password not matched" })
-    //     }
-    //     console.log(user._id)
-    //     const token = jsonwebtoken.sign({ userId: user._id}, process.env.PRIVATE_KEY, { expiresIn: "2hr" });
-    //     res.status(200).json({ user, token });
-
-    // } catch (error) {
-    //     res.status(500).json({ message: error.message })
-    // }
-
     try{
         const user = await User.findOne({email: req.body.email});
         

@@ -24,43 +24,7 @@ const Signup = () => {
 
     }));
   };
-
-  // const onSubmitHandler = async(e) => {
-  //   e.preventDefault(); //prevents refreshing page, agr page refresh hoga tou state mein jo bhi data hoga khatam ho jaye ga
-  //   const data=await axios.post("http://localhost:4041/api/signup",signupData);
-  //   console.log('data', data)
-    
-  //   // empty form field after submitting
-  //   setsignupData({
-  //       Fname:"",
-  //       Lname:"",
-  //       email:"",
-  //       password:""
-  //   })
-  // };
   
-//   const handleSubmit = async (e) => {
-//   e.preventDefault();
-//   try {
-//     const response = await axios.post('http://localhost:4041/api/signup', signupData);
-//     if (response.status === 200) {
-//       // Handle successful signup (e.g., redirect, show success message)
-//       console.log('Signup successful!');
-//       // empty form field after submitting
-//       setsignupData({
-//         Fname: "",
-//         Lname: "",
-//         email: "",
-//         password: ""
-//       });
-//     } else {
-//       // Handle signup error (e.g., display error message)
-//       console.error('Signup failed');
-//     }
-//   } catch (error) {
-//     console.error('Error during signup:', error);
-//   }
-// };
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {

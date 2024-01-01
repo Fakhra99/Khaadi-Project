@@ -1,8 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
+import LandingPage from "./components/Home/LandingPage"
 import Home from "./components/Home/Home";
+
 import Signin from "./components/SignupAndLogin/Signin";
+import Signup from "./components/SignupAndLogin/Signup";
 
 import Salenew from "./components/ProductsCollections/Salenew";
 import Wintercollection from "./components/ProductsCollections/Wintercollection";
@@ -11,32 +14,28 @@ import Fabrics from "./components/ProductsCollections/Fabrics";
 import Readytowear from "./components/ProductsCollections/Readytowear";
 import Western from "./components/ProductsCollections/Western";
 import Track from "./components/ProductsCollections/Track";
-import Signup from "./components/SignupAndLogin/Signup";
 import Bag from "./components/ProductsCollections/Bag";
+
 import Forgotpassword from "./components/SignupAndLogin/Forgotpassword";
 import ChangePassword from "./components/SignupAndLogin/Changepassword";
+
 import WintercollectionData from './components/Admin/WinterCollectionData'
 import Admin from "./components/Admin/Admin";
 import SignupListing from './components/Admin/SignupListing'
 import SignupDetail from "./components/Admin/SignupDetail";
+import UpdateContact from "./components/Admin/UpdateAccount";
+
 import Prenav from "./components//PrenavAndNavbar/Prenav";
 import Navbar from "./components/PrenavAndNavbar/Navbar";
-import UpdateContact from "./components/Admin/UpdateAccount";
-import LandingPage from "./components/Home/LandingPage"
-// import Footer from "./components/Footer"
 
 function App() {
   return (
    
    <>
-  
-  {/* <Prenav/> */}
-   {/* <Navbar/> */}
    <Routes>
     <Route path="/" element={<LandingPage />} />
     <Route path="/prenav" element={<Prenav />} />
-     <Route path="/navbar" element={<Navbar />} />
-    {/* <Route path="/" element={<Home />} /> */}
+    <Route path="/navbar" element={<Navbar />} />
     <Route path="/home" element={<Home />} />
     <Route path="/signin" element={<Signin/>}></Route>
     <Route path="/salenew" element={<Salenew/>}></Route>
@@ -55,9 +54,7 @@ function App() {
     <Route path="/forgot-password" element={<Forgotpassword/>}></Route>
     <Route path="/changepassword" element={<ChangePassword/>}></Route>
     <Route path="/wintercollectiondata" element={<WintercollectionData/>}></Route>
-    {/* <Route path="/footer" element={<Footer/>}></Route> */}
    </Routes>
-   {/* <Footer/> */}
     </>
   );
 }

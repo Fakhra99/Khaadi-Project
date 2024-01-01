@@ -3,7 +3,6 @@ import '../Styles/styles.css'
 import Navbar from "../PrenavAndNavbar/Navbar";
 import Prenav from "../PrenavAndNavbar/Prenav";
 import { Link } from 'react-router-dom';
-// import Footerr from "../Footer/Footer";
 
 const Track = () => {
   return (

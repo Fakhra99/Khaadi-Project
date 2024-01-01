@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -8,7 +7,8 @@ import { useSelector } from "react-redux";
 import "../Styles/styles.css";
 import Prenav from "../PrenavAndNavbar/Prenav";
 import Navbar from "../PrenavAndNavbar/Navbar";
-import Footer from "../Footer/Footer"
+import Footer from "../Footer/Footer";
+
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
 
