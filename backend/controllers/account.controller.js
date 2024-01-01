@@ -160,7 +160,7 @@ export const verifyotp = async (req, res) => {
         const otpverify = await Otp.findOne ({otp})
 
         if(!otpverify){
-            return res.status(400).json({message:"invalid otp"})
+            return res.status(400).json({message:"otp invalid"})
         }
         const hashPassword =await bcrypt.hash (newPassword, 10);
         await User.updateOne ({email}, {$set: {password:hashPassword} });
