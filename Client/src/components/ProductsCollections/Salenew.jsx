@@ -6,82 +6,84 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../features/cartSlice/cartSlice";
 import Prenav from "../PrenavAndNavbar/Prenav";
 import Navbar from "../PrenavAndNavbar/Navbar";
+import Footerr from "../Footer/Footer";
+
 const productsData = [
   // addin test
   {
-    imageUrl:
+    image:
         "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw7a83b8b8/images/hi-res/lla230810_red_1.jpg?sw=800&sh=1200",
     title: "Printed Lawn | Top Dupatta",
     description: "Fabrics 2 piece",
     originalPrice:"2200",
-    discountedprice: "1,500",
+    discountedPrice: "1,500",
     id: "acw12"
   },
 
   {
-    imageUrl:
+    image:
       "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw541fcf91/images/hi-res/ala230806_teal_1.jpg?sw=800&sh=1200",
     title: "Printed Lawn | Top Dupatta",
     description: "Fabrics 2 piece",
     originalPrice:"2200",
-    discountedprice: "1,500",
+    discountedPrice: "1,500",
      id: "abw12"
   },
   {
-    imageUrl:
+    image:
       "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwf1f6602f/images/hi-res/bla230806_black_1.jpg?sw=800&sh=1200",
     title: "Printed Lawn | Top Dupatta",
     description: "Fabrics 2 piece",
     originalPrice:"2200",
-    discountedprice: "1,900",
+    discountedPrice: "1,900",
      id: "a6w12"
   },
   {
-    imageUrl:
+    image:
       "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw75f51f17/images/hi-res/ala230821_teal_1.jpg?sw=800&sh=1200",
     title: "Printed Lawn | Top Dupatta",
     description: "Fabrics 2 piece",
     originalPrice:"2200",
-    discountedprice: "2,000",
+    discountedPrice: "2,000",
      id: "aiw12"
   },
   {
-    imageUrl:
+    image:
       "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwbad0fffc/images/hi-res/est23479_grey_2.jpg?sw=400&sh=600",
     title: "Printed Lawn | Top Dupatta",
     description: "Fabrics 2 piece",
     originalPrice:"2200",
-    discountedprice: "2,500",
+    discountedPrice: "2,500",
      id: "acu12"
   }, 
 
    {
-    imageUrl:
+    image:
       "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwc175d264/images/hi-res/est23480_multi_2.jpg?sw=400&sh=600",
     title: "Printed Lawn | Top Dupatta",
     description: "Fabrics 2 piece",
     originalPrice:"2200",
-    discountedprice: "2,500",
+    discountedPrice: "2,500",
      id: "agw12"
   }, 
 
    {
-    imageUrl:
+    image:
       "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dwf1459138/images/hi-res/est23483_purple_2.jpg?sw=400&sh=600",
     title: "Printed Lawn | Top Dupatta",
     description: "Fabrics 2 piece",
     originalPrice:"2200",
-    discountedprice: "2,500",
+    discountedPrice: "2,500",
      id: "bcw12"
   }, 
 
    {
-    imageUrl:
+    image:
       "https://pk.khaadi.com/dw/image/v2/BJTG_PRD/on/demandware.static/-/Sites-khaadi-master-catalog/default/dw72cd4d37/images/hi-res/est23482_green_2.jpg?sw=400&sh=600",
     title: "Printed Lawn | Top Dupatta",
     description: "Fabrics 2 piece",
     originalPrice:"2200",
-    discountedprice: "2,500",
+    discountedPrice: "2,500",
      id: "aco12"
   }, 
 ];
@@ -135,7 +137,7 @@ const Salenew = () => {
       <img
         className="card-img-top card5"
         alt="..."
-        src={product.imageUrl}
+        src={product.image}
       />
       <div className="card-body">
         <button
@@ -143,14 +145,7 @@ const Salenew = () => {
           onClick={() => dispatch(addToCart(product))}
         >
           Add To Bag
-        </button>
-
-        {/* <p>
-          <Link style={{ textDecoration: "none", color: "black" }}>
-            Fabrics 2 Piece
-          </Link>
-        </p> */}
-       
+        </button>       
         <p style={{ marginTop: "1px" }}>{product.title}</p>
          <p style={{ marginTop: "1px" }}>{product.description}</p>
         <p>
@@ -160,16 +155,14 @@ const Salenew = () => {
           >
             {product.originalPrice}
           </span>{" "}
-          <span className="text-danger">Rs {product.discountedprice}</span>
+          <span className="text-danger">Rs {product.discountedPrice}</span>
         </p>
       </div>
     </div>
   ))}
 </div>
-
-      
+<Footerr/>
     </div>
-    
   );
 };
 

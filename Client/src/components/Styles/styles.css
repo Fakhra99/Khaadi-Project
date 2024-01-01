@@ -288,7 +288,7 @@ body {
   /* margin-bottom: 0px; */
   position:absolute;
   left: 0px;
-  top: 452px;
+  top: 460px;
   border: none;
 }
 
@@ -470,83 +470,18 @@ body {
   height: 38px;
 }
 
-
-/* Main footer  */
-
-footer {
-  /* border: 1px solid red; */
-
-  height: auto;
-  padding: 50px;
+/* footer */
+.footerSec1{
+  width: 100vw;
+  height: 10vh;
+  background-color: rgb(218, 212, 212);
   display: flex;
+  justify-content: center;
   align-items: center;
-  color: #000;
-  justify-content: space-between;
 }
 
-.get-in-touch {
-  margin-left: 50px;
-  margin-top: -5%;
-}
-
-.get-in-touch h4 {
-  padding-bottom: 20px;
-}
-
-.get-in-touch.same p {
-  color: #777;
-  font-family: Arial, helvetica neue, Helvetica, sans-serif;
-  font-weight: 400;
-  font-style: normal
-}
-
-.same {
-  padding-bottom: 10px;
-}
-
-.address {
-  padding-bottom: 10px;
-  font-family: Arial, helvetica neue, Helvetica, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  letter-spacing: .075em;
-  color: #2d2b2a;
-  text-transform: uppercase;
-}
-
-.our-company {
-  font-family: Arial, helvetica neue, Helvetica, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  letter-spacing: .075em;
-  color: #2d2b2a;
-  text-transform: uppercase;
-}
-
-.last-portion {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 75px;
-  padding-right: 20px;
-  margin-top: -5%;
-}
-
-.last-portion p {
-  font-size: 12px;
-  color: grey;
-}
-.post{
-  height: 100vh;
-  width: 100%;
-  background-image: url('https://khaadi.com/media/wysiwyg/khaadi/01-01-landingpage/Country_Landing-0602-1920x1080.jpg');
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-position: relative;
+.myicon{
+  margin: 15%;
 }
 
 /* landing page */

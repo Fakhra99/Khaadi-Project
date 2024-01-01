@@ -15,7 +15,7 @@ import Signup from "./components/SignupAndLogin/Signup";
 import Bag from "./components/ProductsCollections/Bag";
 import Forgotpassword from "./components/SignupAndLogin/Forgotpassword";
 import ChangePassword from "./components/SignupAndLogin/Changepassword";
-import WintercollectionData from './components/ProductsCollections/WinterCollectionData'
+import WintercollectionData from './components/Admin/WinterCollectionData'
 import Admin from "./components/Admin/Admin";
 import SignupListing from './components/Admin/SignupListing'
 import SignupDetail from "./components/Admin/SignupDetail";

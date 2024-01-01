@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import '../Styles/styles.css';
  import Navbar from "../PrenavAndNavbar/Navbar";
 import Prenav from "../PrenavAndNavbar/Prenav";
-
+import Footerr from "../Footer/Footer";
 
 const Fabrics = () => {
   return (
@@ -26,14 +26,6 @@ const Fabrics = () => {
 
       <div className='d-flex mb-3'>
         <p className='bcrum'>Sort by</p>
-
-        <select className='bcrumDropdown' >
-        <option selected>Recommended</option>
-        <option value="1">Most Popular</option>
-        <option value="2">New Arrival</option>
-        <option value="3">Price Low To High</option>
-        <option value="3">Price High To Low</option>
-        </select>
 
         <button className='filter'>FILTER </button>
       </div>
@@ -118,8 +110,7 @@ const Fabrics = () => {
         </div>
         </div>
       </div>
-
-      
+      <Footerr/>
   </div>
   );
 }

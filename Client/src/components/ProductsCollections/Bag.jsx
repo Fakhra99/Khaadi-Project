@@ -1,5 +1,3 @@
-// import React, { useRef, useState } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 // Import Swiper styles
@@ -10,7 +8,7 @@ import { useSelector } from "react-redux";
 import "../Styles/styles.css";
 import Prenav from "../PrenavAndNavbar/Prenav";
 import Navbar from "../PrenavAndNavbar/Navbar";
-
+import Footer from "../Footer/Footer"
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
 
@@ -29,11 +27,12 @@ const Bag = () => {
         {items.map((item, index) => (
           <div key={index} className="col-6 col-md-4 mb-4">
             <div className="card">
-              <img src={item.imageUrl} alt={item.title} className="card-img-top" />
+              {/* <img src={`http://localhost:4041/upload/${item.image}`} alt={item.title} className="card-img-top" /> */}
+               <img src= {item.image} alt={item.title} className="card-img-top" />
               <div className="card-body">
                 <h5 className="card-title">{item.title}</h5>
                 {/* <p className="card-text">Price: Rs{item.originalPrice}</p> */}
-                <p className="card-text">Price: RS{item.discountedprice}</p>
+                <p className="card-text">Price: RS{item.discountedPrice}</p>
               </div>
             </div>
           </div>
@@ -96,6 +95,7 @@ const Bag = () => {
           />
         </SwiperSlide>
       </Swiper>
+       <Footer/>
     </>
   );
 };
