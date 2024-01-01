@@ -7,12 +7,6 @@ import { Link } from 'react-router-dom';
 const SignupListing = () => {
     const [signups, setSignups] = useState([]);
 
-    // const fetchSignups=async()=>{
-    //     const response=await axios.get("http://localhost:4041/api/allcontacts")
-    //     const data=await response.data.signups;
-    //     setSignups(data);
-    // }
-
     const fetchSignups = async () => {
   try {
     // Get the authentication token from your storage (localStorage, sessionStorage, cookies, etc.)
