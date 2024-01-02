@@ -13,7 +13,7 @@ const SignupListing = () => {
     const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OGQ2NmIxNDgxZjViODNkZTA1MTljMiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcwNDAwMDg0NiwiZXhwIjoxNzA2NTkyODQ2fQ.0BLZCKYMPFcGzYjbSLaaRthHaHJ4q3isLmJFBhB13Kg";
     // const authToken= cookies.get("accessToken")
     console.log(authToken)
-    const response = await axios.get("http://localhost:4041/api/allcontacts", {
+    const response = await axios.get("https://healthy-gold-kilt.cyclic.app/api/allcontacts", {
       headers: {
         Authorization: `Bearer ${authToken}`,
       },
