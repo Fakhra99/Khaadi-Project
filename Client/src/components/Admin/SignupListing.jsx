@@ -12,7 +12,7 @@ const SignupListing = () => {
     // Get the authentication token from your storage (localStorage, sessionStorage, cookies, etc.)
     const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OGQ2NmIxNDgxZjViODNkZTA1MTljMiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcwNDAwMDg0NiwiZXhwIjoxNzA2NTkyODQ2fQ.0BLZCKYMPFcGzYjbSLaaRthHaHJ4q3isLmJFBhB13Kg";
     // const authToken= cookies.get("accessToken")
-    console.log(authToken)
+    // console.log(authToken)
     const response = await axios.get("https://healthy-gold-kilt.cyclic.app/api/allcontacts", {
       headers: {
         Authorization: `Bearer ${authToken}`,
