@@ -60,7 +60,7 @@ const WinterCollection = () => {
           <div key={item._id} className='col-md-3 mb-4'>
             <div className="card" style={{ width: "18rem" }}>
                <img
-        src={`http://localhost:4041/upload/${item.image}`}
+        src={`https://healthy-gold-kilt.cyclic.app/upload/${item.image}`}
         alt={item.title}
         className="card-img-top"
       />
