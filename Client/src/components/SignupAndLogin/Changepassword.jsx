@@ -34,7 +34,7 @@ const ChangePassword = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:4041/api/otp-verify', {
+      const response = await axios.post('https://healthy-gold-kilt.cyclic.app/api/otp-verify', {
         email,
         otp,
         newPassword,

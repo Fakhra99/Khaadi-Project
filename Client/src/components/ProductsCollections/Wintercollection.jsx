@@ -17,7 +17,7 @@ const WinterCollection = () => {
     
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:4041/getwinter-collection');
+        const response = await axios.get('https://healthy-gold-kilt.cyclic.app/getwinter-collection');
         setWinterCollectionData(response.data.winterCollection);
         // console.log(winterCollectionData)
       } catch (error) {

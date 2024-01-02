@@ -16,7 +16,7 @@ const UpdateContact = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:4041/api/allcontacts/${id}`);
+        const response = await axios.get(`https://healthy-gold-kilt.cyclic.app/api/allcontacts/${id}`);
         const data = response.data.contact;
 
         // Prepopulate form fields with existing values
@@ -39,7 +39,7 @@ const UpdateContact = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:4041/api/update/${id}`, accountData);
+      await axios.put(`https://healthy-gold-kilt.cyclic.app/api/update/${id}`, accountData);
       toast.success("Contact Updated Successfully!");
       navigate("/adminn");
     } catch (error) {

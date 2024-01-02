@@ -22,7 +22,7 @@ const WinterCollectionData = () => {
       formData.append('image', image);
 
       // Make an HTTP request to your backend API to save the data
-      const response = await axios.post('http://localhost:4041/winter-collection', formData, {
+      const response = await axios.post('https://healthy-gold-kilt.cyclic.app/winter-collection', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

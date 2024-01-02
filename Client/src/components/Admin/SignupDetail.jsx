@@ -7,7 +7,7 @@ const SignupDetail = () => {
   const { id } = useParams();
 
   const fetchSignup = async () => {
-      const response = await axios.get(`http://localhost:4041/api/singleContact/${id}`);
+      const response = await axios.get(`https://healthy-gold-kilt.cyclic.app/api/singleContact/${id}`);
       const data =await response.data.signup;
       console.log(data);
       setSignup(data);
