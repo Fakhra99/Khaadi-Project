@@ -17,7 +17,7 @@ const WinterCollection = () => {
     
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://healthy-gold-kilt.cyclic.app/getwinter-collection');
+        const response = await axios.get('http://localhost:4041/getwinter-collection');
         setWinterCollectionData(response.data.winterCollection);
         // console.log(winterCollectionData)
       } catch (error) {
@@ -60,7 +60,7 @@ const WinterCollection = () => {
           <div key={item._id} className='col-md-3 mb-4'>
             <div className="card" style={{ width: "18rem" }}>
                <img
-        src={`https://healthy-gold-kilt.cyclic.app/upload/${item.image}`}
+        src={`http://localhost:4041/upload/${item.image}`}
         alt={item.title}
         className="card-img-top"
       />
@@ -71,11 +71,11 @@ const WinterCollection = () => {
                 <p className="card-text" style={{ color: 'red', textDecoration: 'line-through', marginRight: '10px' }}>Original Price: {item.originalPrice}</p>
                 <p className="card-text">Discounted Price: {item.discountedPrice}</p>
                  <button
-          className="Addbag"
-          onClick={() => dispatch(addToCart(item))}
-        >
-          Add To Bag
-        </button>  
+                    className="Addbag"
+                    onClick={() => dispatch(addToCart(item))}
+                 >
+                   Add To Bag
+                  </button>  
               </div>
             </div>
           </div>

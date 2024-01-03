@@ -8,13 +8,13 @@ body {
 /* prenav styles */
 .preNav {
   background-color: #f8643c;
-  height: 35px;
+  height: 25px;
 }
 
 .preNav > p {
   color: white;
   font-weight: bold;
-  padding-top: 12px;
+  padding-top: 10px;
   line-height: 5px;
   font-size: 12px;
   display: flex;
@@ -56,7 +56,7 @@ body {
 }
 
 .navLink > a {
-  margin-right: 20px;
+  margin-right: 15px;
   text-decoration: none;
   color: black;
 }
@@ -285,26 +285,31 @@ body {
   left: 0px;
   top: 460px;
   border: none;
+  background-color: #000;
+  color: white;
 }
 
 .Addbtn:hover{
-  background-color: #000;
-  color: white;
+  background-color: rgb(230, 224, 224);
+  color: black;
 }
 
 .Addbag{
     width: 285px;
+    height: 25px;
   margin-left: 1px;
   /* margin-bottom: 0px; */
   position:absolute;
   left: 0px;
-  top: 430px;
+  top: 410px;
   border: none;
+  background-color: #000;
+  color: white;
 }
 
 .Addbag:hover{
-  background-color: #000;
-  color: white;
+  background-color: rgb(224, 218, 218);
+  color: black;
 }
 .s1{
   position: relative;

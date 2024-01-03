@@ -2,6 +2,8 @@ import jwt from 'jsonwebtoken'
 // middlewares.js
 export const middlewarefunc = (req, res, next) => {
     try {
+
+        //check if the request has an Authorization header and if it starts with "Bearer".
         req.headers.authorization &&
         req.headers.authorization.startsWith("Bearer");
 
@@ -13,38 +15,25 @@ export const middlewarefunc = (req, res, next) => {
             if (err) {
                 return res.status(403).json("you are not authorized");
             }
-            //
-            if (user.role === "admin") {
-                    req.user = user;
-                    next();
-                } else {
-                    return res.status(403).json("You do not have the necessary permissions to access this resource");
-                }
-            });
+    
+            req.user=user;
+            next()
+
+        });
     } catch (error) {
-        res.status(500).json("internal server error");
+        res.status(500).json("internal server error")
+        
     }
-};
+}
 
-// export const authRole=(roles)=> {
-//     return (req, res, next) => {
-//         const token = req.header('Authorization');
 
-//         if (!token) {
-//             return res.status(401).json({ message: 'denied access because of missing token' });
-//         }
-
-//         jwt.verify(token, process.env.PRIVATE_KEY, (err, user) => {
-//             if (err) {
-//                 return res.status(403).json({ message: 'token not valid' });
-//             }
-
-//             if (!roles.includes(user.role)) {
-//                 return res.status(403).json({ message: 'not authourized' });
-//             }
-
-//             req.user = user;
-//             next();
-//         });
-//     };
-// }
+export const checkRole = (role)=>{
+    return(req, res, next)=>{
+        const userRole= req.user && req.role.user;
+        console.log(req.user)
+        if(userRole!=role){
+        req.status(403).json("only admins are allowed")
+        }
+        next(role)
+    }
+}

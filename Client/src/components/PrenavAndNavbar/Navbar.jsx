@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+// import { useSelector } from 'react-redux'; 
 import '../Styles/styles.css';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-
+  //  const cartItems = useSelector((state) => state.cart.items);
+  // event handler handleScroll: updates the scrollPosition state with the current vertical scroll position (window.scrollY).
   const handleScroll = () => {
     setScrollPosition(window.scrollY);
   };
@@ -15,6 +17,7 @@ const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  //  Empty dependency array means the effect runs once after the initial render
 
   return (
     <div className={`navMain d-flex ${scrollPosition > 50 ? 'sticky' : ''}`}>
@@ -53,6 +56,7 @@ const Navbar = () => {
         <Link to="/bag">
         <img src="https://pk.khaadi.com/on/demandware.static/Sites-Khaadi_PK-Site/-/default/dwc786c49d/images/shopping.svg" alt="bag" style={{height:"20px", width:"25px"}} />
         <p style={{ color: 'black', textDecoration: 'none', fontSize:"12px"}}>Bag</p>
+         {/* <span className="cartItemCount">{cartItems.length}</span> */}
         </Link>
       </div>
       

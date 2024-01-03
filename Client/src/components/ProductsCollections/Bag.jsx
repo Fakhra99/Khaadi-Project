@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { useSelector } from "react-redux";
+// useSelector renders items from redux store
+import { useSelector } from "react-redux"; 
 import "../Styles/styles.css";
 import Prenav from "../PrenavAndNavbar/Prenav";
 import Navbar from "../PrenavAndNavbar/Navbar";
@@ -13,6 +14,8 @@ import Footer from "../Footer/Footer";
 import { FreeMode, Pagination } from "swiper/modules";
 
 const Bag = () => {
+  // callback function (state) => state.cart is passed to useSelector. 
+  // This function selects the cart slice from the Redux store state.
   const { items } = useSelector((state) => state.cart);
   console.log("display item here",items)
   return (

@@ -12,7 +12,7 @@ const Forgotpassword = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('https://healthy-gold-kilt.cyclic.app/api/user-forget', {
+      const response = await axios.post('http://localhost:4041/api/user-forget', {
         email,
       });
 

@@ -37,16 +37,14 @@ export const login = async (req, res,next) => {
         if(!isCorrect) return next(console.log(400,"Wrong password or email!"));
 
         const token = jwt.sign({
-            id: user._id,
-            // 
+            id: user._id, 
             role: user.role
         },
         process.env.PRIVATE_KEY, { expiresIn: "30d" })
-// except password all information is store in this info object
+// destructuring to create new object info(contains all properties of the user._doc object except password. 
+// the user data retrieved from a database, and this step ensures that the password is not included in the response.
         const {password, ...info} = user._doc;
-        res.cookie("accessToken",token,{
-            httpOnly:true
-        }).status(200).send(info);
+        res.status(200).json({message:"success", user:info, token})
     }catch(err){
         next(err)
     }
@@ -164,7 +162,7 @@ export const verifyotp = async (req, res) => {
         }
         const hashPassword =await bcrypt.hash (newPassword, 10);
         await User.updateOne ({email}, {$set: {password:hashPassword} });
-        await Otp.deleteOne({email})
+        await Otp.deleteOne({email}) //
         res.status(200).json({message:"password changed successfully"})
     }catch(error){
         res.status(501).json({message:error.message})

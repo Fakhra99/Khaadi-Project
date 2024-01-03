@@ -22,7 +22,7 @@ const WinterCollectionData = () => {
       formData.append('image', image);
 
       // Make an HTTP request to your backend API to save the data
-      const response = await axios.post('https://healthy-gold-kilt.cyclic.app/winter-collection', formData, {
+      const response = await axios.post('http://localhost:4041/winter-collection', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -31,16 +31,19 @@ const WinterCollectionData = () => {
       // Handle the response as needed
       console.log(response.data);
 
+       window.alert('Form submitted successfully!');
+
     setTitle('');
     setDescription('');
     setOriginalPrice('');
     setDiscountedPrice('');
     setImage(null);
 
-      // You can redirect the user or perform other actions based on the response
     } catch (error) {
       // Handle error
       console.error(error.response.data);
+
+      window.alert('Form submission failed. Please try again.');
     }
   };
 

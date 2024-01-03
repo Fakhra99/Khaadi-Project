@@ -14,7 +14,8 @@ dotenv.config();
 // Enable CORS
 app.use(cors());
 
-app.use("/upload",express.static("upload"))
+//pecifies a base URL path ("/upload") that will be used to access the static files.
+app.use("/upload",express.static("upload"))  
 
 // Use bodyParser middleware
 app.use(bodyParser.json());

@@ -5,8 +5,10 @@ import path from 'path';
 
 const router= express.Router();
 
+// specifies how files should be stored on the disk.
 const storage=multer.diskStorage({
-    destination:(req, file , cb)=>{
+    //cb (callback) function provided by multer: control the file storage process,the destination directory and the filename.
+    destination:(req, file , cb)=>{  
         cb(null, "upload/")
     },
     filename:(req, file , cb)=>{

@@ -4,6 +4,7 @@ export const createWinterCollection = async (req, res) => {
   try {
     const { title, description, originalPrice, discountedPrice } = req.body;
 
+    // creates a new instance of the WinterCollection model
     const newWinterCollection = new WinterCollection({
       image: req.file ? req.file.filename : undefined,
       title,

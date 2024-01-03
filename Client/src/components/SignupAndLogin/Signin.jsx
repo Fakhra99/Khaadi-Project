@@ -24,26 +24,28 @@ const Signin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://healthy-gold-kilt.cyclic.app/api/signin', signinData);
+      const response = await axios.post('http://localhost:4041/api/signin', signinData);
       console.log('Server Response:', response);
 
       if (response.status === 200) {
         console.log('Signin successful!');
+        // window.alert('You ar logged in now!');
         setsigninData({
           email: "",
           password: ""
         });
 
         // Check the user's role and navigate accordingly
-        const userRole = response.data.role;  
+        const userRole = response;  
         console.log('User Role:', userRole);
         // console.log(response);
 
-
-        if (userRole === 'customer') {
+        localStorage.setItem("accessToken", response.data.token)
+        if (response.data.user.role === 'customer') {
           // Navigate to the home page
           navigate('/home');
-        } else if (userRole === 'admin') {
+        } else if (response.data.user.role === 'admin') {
+          
           // Navigate to the admin dashboard
           navigate('/adminn');
         } else {
