@@ -11,8 +11,8 @@ const Signup = () => {
     Fname:"",
     Lname:"",
     email:"",
-    password:"",
-    role:""
+    password:""
+    // role:""
   });
    const navigate = useNavigate();
   const handleChange = (e) => {
@@ -39,8 +39,8 @@ const handleSubmit = async (e) => {
         Fname: "",
         Lname: "",
         email: "",
-        password: "",
-        role:""
+        password: ""
+        // role:""
       });
 
       navigate('/signin')
@@ -88,10 +88,10 @@ const handleSubmit = async (e) => {
           <label htmlFor="confirmPassword" className="form-label">Confirm Password <sup style={{ color: "red" }}>*</sup></label>
           <input type="password" className="form-control" id="confirmPassword" />
         </div>
-       <div className="mb-3">
+       {/* <div className="mb-3">
           <label htmlFor="role" className="form-label">Role <sup style={{ color: "red" }}>*</sup></label>
           <input type="text" className="form-control" name='role' value={signupData.role} onChange={handleChange} id="role" placeholder="Are you Admin/Customer" />
-        </div>
+        </div> */}
         <div className='mb-3'>
           <button className='w-100 btn btn-dark'>CREATE ACCOUNT</button>
         </div>

@@ -32,7 +32,7 @@ const SignupListing = () => {
 
     // delete function
     const handleDelete=async(id)=>{
-      const response=await axios.delete(`https://healthy-gold-kilt.cyclic.app/api/delete/${id}`)
+      const response=await axios.delete(`http://localhost:4041/api/delete/${id}`)
       if(response.status ===200){
          window.alert('Deleted account successfully!');
         fetchSignups();
@@ -48,7 +48,7 @@ const SignupListing = () => {
 // }
 const handleUpdate = async (id) => {
   try {
-    const response = await axios.put(`https://healthy-gold-kilt.cyclic.app/api/update/${id}`, {});
+    const response = await axios.put(`http://localhost:4041/api/update/${id}`, {});
     console.log(response.data); // Log the response to check server's response
     fetchSignups();
   } catch (error) {

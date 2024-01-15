@@ -8,7 +8,7 @@ router.post("/signin", login)
 // router.get("/allcontacts", getAllContacts)
 router.get("/allcontacts",middlewarefunc, getAllContacts)
 router.get("/singleContact/:id", getSingleAccount)
-router.delete("/delete/:id", checkRole, delAccount)
+router.delete("/delete/:id", delAccount)
 router.put("/update/:id", update);
 
 router.post("/user-forget", forgetPassword);

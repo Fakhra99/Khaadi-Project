@@ -11,14 +11,14 @@ export const register = async (req, res) => {
 
     try {
         console.log("Called")
-        const {Fname, Lname, email, password, role} = req.body
+        const {Fname, Lname, email, password} = req.body
         const existingUser = await User.findOne({ email });
         if (existingUser) {
             return res.status(401).json({ message: "User Already exists" });
         }
         const hashPassword = await bcrypt.hash(password, 10)
 
-        const newUser = new User({Fname,Lname, email, password: hashPassword, role });
+        const newUser = new User({Fname,Lname, email, password: hashPassword });
         await newUser.save()
         res.status(201).json(newUser)
     } catch (error) {
@@ -143,6 +143,7 @@ export const forgetPassword = async (req, res) => {
       })
       await otpSave.save()
       res.status(200).json({ message: "OTP Send Successfully" })
+      console.log("opt here", otp)
     }
 
   } catch (error) {
@@ -156,10 +157,15 @@ export const verifyotp = async (req, res) => {
     try{
         const{email,otp,newPassword} = req.body
         const otpverify = await Otp.findOne ({otp})
+        console.log(otp)
 
-        if(!otpverify){
-            return res.status(400).json({message:"otp invalid"})
-        }
+        // if(!otpverify){
+        //     return res.status(400).json({message:"otp invalid"})
+        // }
+        if (!otpverify || otpverify.otp !== otp) {
+    return res.status(400).json({ message: "OTP invalid" });
+}
+
         const hashPassword =await bcrypt.hash (newPassword, 10);
         await User.updateOne ({email}, {$set: {password:hashPassword} });
         await Otp.deleteOne({email}) //
