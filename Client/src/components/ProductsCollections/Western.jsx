@@ -9,6 +9,7 @@ import Footerr from "../Footer/Footer";
 const Western = () => {
   return (
     <div>
+      {/* pre nav and navbar */}
       <Prenav/>
     <Navbar/>
       <div>

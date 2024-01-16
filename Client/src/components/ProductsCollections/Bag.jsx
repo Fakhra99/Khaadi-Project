@@ -20,6 +20,7 @@ const Bag = () => {
   console.log("display item here",items)
   return (
     <>
+    {/* prenav and nav bar */}
     <Prenav/>
     <Navbar/>
 
